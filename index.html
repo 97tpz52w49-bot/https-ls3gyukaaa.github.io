@@ -1,0 +1,1865 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<meta name="description" content="你在古代是谁 · 20 道情境题、12 大风骨族群、60 位古代人物（男女分库）。五维计算，结果由你的选择直接决定，无随机。">
+<title>你在古代是谁？· 60 位古代人物 · 12 大风骨</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%23E8506F'/%3E%3Cpath d='M16 24c-5-3.4-8-6.2-8-9.6A4.4 4.4 0 0 1 16 11a4.4 4.4 0 0 1 8 3.4c0 3.4-3 6.2-8 9.6z' fill='%23fff'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#3A2A31; --ink2:#6E5A61; --ink3:#A08E95; --ink4:#C6B6BC;
+  --line:#F6DDE3; --line2:#FCEFF3; --bg:#FFF8F9; --card:#FFFFFF;
+  --p1:#FFF0F4; --p2:#FFDCE7; --p3:#FFBCCF; --p4:#FF8FAE; --p5:#E8506F; --p6:#B92A50;
+  --gold:#E0A85C;
+  --grad:linear-gradient(135deg,#FF7A9C 0%,#D93A63 100%);
+  --sh:0 10px 28px rgba(190,80,110,.10), 0 2px 6px rgba(190,80,110,.06);
+  --sh2:0 18px 44px rgba(190,80,110,.17);
+  --r:22px;
+}
+*{box-sizing:border-box}
+[hidden]{display:none !important}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;color:var(--ink);
+  font:16px/1.7 "PingFang SC","HarmonyOS Sans SC","Hiragino Sans GB","Microsoft YaHei UI","Microsoft YaHei","Noto Sans SC",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  background:
+    radial-gradient(900px 520px at 8% -8%, #FFDCE7 0%, rgba(255,220,231,0) 62%),
+    radial-gradient(760px 500px at 96% 4%, #FFE6EC 0%, rgba(255,230,236,0) 60%),
+    radial-gradient(860px 560px at 50% 108%, #FFF0E4 0%, rgba(255,240,228,0) 62%),
+    var(--bg);
+  background-attachment:fixed;-webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+img,svg{max-width:100%}
+h1,h2,h3,h4{margin:0;line-height:1.3;font-weight:800;letter-spacing:.01em}
+p{margin:0}
+button{font-family:inherit}
+.wrap{width:100%;max-width:920px;margin:0 auto;padding:0 18px}
+
+/* ---------- 通用动画 ---------- */
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+@keyframes sway{0%,100%{transform:rotate(0deg)}50%{transform:rotate(-4deg)}}
+@keyframes sway2{0%,100%{transform:rotate(0deg)}50%{transform:rotate(4deg)}}
+@keyframes breathe{0%,100%{opacity:.35;transform:scale(.97)}50%{opacity:.75;transform:scale(1.03)}}
+@keyframes twinkle{0%,100%{opacity:.25;transform:scale(.8)}50%{opacity:1;transform:scale(1.15)}}
+@keyframes fall{0%{transform:translate3d(0,-12%,0) rotate(0deg);opacity:0}
+  10%{opacity:.9}90%{opacity:.75}100%{transform:translate3d(24px,110%,0) rotate(300deg);opacity:0}}
+@keyframes sealIn{0%{opacity:0;transform:scale(1.6) rotate(-12deg)}60%{opacity:1;transform:scale(.94) rotate(3deg)}100%{opacity:1;transform:scale(1) rotate(0)}}
+@keyframes inkIn{0%{opacity:0;transform:translateY(12px) scale(.96)}100%{opacity:1;transform:none}}
+.fig-float{animation:floaty 4.6s ease-in-out infinite}
+.fig-sway{animation:sway 3.6s ease-in-out infinite;transform-origin:60px 110px;transform-box:view-box}
+.fig-sway2{animation:sway2 3.6s ease-in-out infinite;transform-origin:60px 110px;transform-box:view-box}
+.fig-halo{animation:breathe 4.4s ease-in-out infinite;transform-origin:60px 60px;transform-box:view-box}
+.fig-spark{animation:twinkle 2.6s ease-in-out infinite;transform-origin:center;transform-box:fill-box}
+.fig-acc{animation:floaty 3.4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.petals{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+.petals i{position:absolute;top:-6%;width:11px;height:11px;background:var(--p3);border-radius:60% 0 60% 0;opacity:0;
+  animation:fall 11s linear infinite}
+.petals i:nth-child(1){left:6%;animation-delay:0s}
+.petals i:nth-child(2){left:20%;animation-delay:1.6s;width:8px;height:8px;background:var(--p2)}
+.petals i:nth-child(3){left:36%;animation-delay:3.4s}
+.petals i:nth-child(4){left:52%;animation-delay:0.9s;width:9px;height:9px;background:var(--p4)}
+.petals i:nth-child(5){left:68%;animation-delay:5.2s}
+.petals i:nth-child(6){left:80%;animation-delay:2.6s;width:7px;height:7px;background:var(--p2)}
+.petals i:nth-child(7){left:90%;animation-delay:7s}
+@media (prefers-reduced-motion:reduce){
+  *{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important}
+}
+
+/* ---------- 无 JS 提示 ---------- */
+.nojs{max-width:920px;margin:18px auto 0;padding:18px 20px;border-radius:20px;position:relative;z-index:5;
+  background:linear-gradient(180deg,#FFF5F7,#FFEDF2);border:1px solid #F8D6E0;box-shadow:var(--sh)}
+.nojs > b{display:block;font-size:15px;color:var(--p6);margin-bottom:8px}
+.nojs p{font-size:13.5px;color:#7A5E68;line-height:1.75;margin:0 0 8px}
+.nojs code{background:#FFE2EA;border-radius:6px;padding:1px 6px;font-family:Consolas,Monaco,monospace;font-size:12.5px}
+
+/* ---------- 口令门 ---------- */
+.gate{position:fixed;inset:0;z-index:120;display:grid;place-items:center;padding:24px;
+  background:radial-gradient(900px 520px at 10% -6%, #FFDCE7 0%, rgba(255,220,231,0) 62%),
+             radial-gradient(760px 480px at 92% 4%, #FFE9DC 0%, rgba(255,233,220,0) 60%), #FFF8F9}
+.gate-card{position:relative;overflow:hidden;width:100%;max-width:384px;background:#fff;border:1px solid var(--line);
+  border-radius:26px;box-shadow:var(--sh2);padding:30px 24px 22px;text-align:center}
+.gate-card::before{content:"";position:absolute;width:230px;height:230px;border-radius:50%;right:-95px;top:-115px;
+  background:radial-gradient(circle at 40% 40%, #FFBCCF 0%, rgba(255,188,207,0) 70%)}
+.gate-heart{position:relative;z-index:1;width:58px;height:58px;margin:0 auto 10px;display:block;
+  filter:drop-shadow(0 10px 18px rgba(200,60,100,.26))}
+.gate-card h2{position:relative;z-index:1;font-size:21px}
+.gate-sub{position:relative;z-index:1;font-size:13.5px;color:var(--ink3);margin-top:9px;line-height:1.6}
+.gate-input{position:relative;z-index:1;width:100%;margin-top:18px;padding:14px 16px;font-size:16px;font-family:inherit;
+  color:var(--ink);background:#FFFBFC;border:1.5px solid var(--line);border-radius:15px;outline:none;
+  -webkit-appearance:none;appearance:none;transition:border-color .18s,box-shadow .18s}
+.gate-input:focus{border-color:var(--p5);box-shadow:0 0 0 3px rgba(232,80,111,.14)}
+.gate-card .btn{position:relative;z-index:1;width:100%;margin-top:12px}
+.gate-err{position:relative;z-index:1;min-height:20px;margin-top:10px;font-size:13px;font-weight:700;color:var(--p6)}
+.gate-tip{position:relative;z-index:1;margin-top:4px;font-size:12px;color:var(--ink4);line-height:1.65}
+.gate-card.shake{animation:gateShake .42s ease}
+@keyframes gateShake{0%,100%{transform:none}18%{transform:translateX(-8px)}36%{transform:translateX(8px)}54%{transform:translateX(-5px)}72%{transform:translateX(5px)}}
+body.gated{overflow:hidden}
+body.gated .topbar,body.gated main,body.gated .foot{visibility:hidden}
+
+/* ---------- 顶栏 ---------- */
+.topbar{position:sticky;top:0;z-index:40;backdrop-filter:saturate(150%) blur(12px);background:rgba(255,248,249,.86);
+  border-bottom:1px solid rgba(246,221,227,.9)}
+.topbar-in{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:58px}
+.brand{display:flex;align-items:center;gap:9px;font-weight:800;font-size:15px}
+.brand .logo{width:28px;height:28px;flex:0 0 auto}
+.brand small{font-weight:600;color:var(--ink3);font-size:12px}
+
+/* ---------- 按钮 ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1.5px solid transparent;border-radius:999px;
+  padding:12px 20px;font-size:15px;font-weight:700;cursor:pointer;min-height:46px;user-select:none;
+  transition:transform .16s ease,box-shadow .18s ease,background .18s ease,color .18s,border-color .18s;background:#fff;color:var(--ink)}
+.btn:active{transform:translateY(1px) scale(.99)}
+.btn-primary{background:var(--grad);color:#fff;box-shadow:0 10px 22px rgba(200,60,100,.30)}
+.btn-primary:hover{box-shadow:0 14px 28px rgba(200,60,100,.36)}
+.btn-ghost{background:#fff;border-color:var(--line);color:var(--ink2)}
+.btn-ghost:hover{border-color:#F5C6D6;color:var(--ink);background:#FFF9FB}
+.btn-soft{background:var(--p2);color:var(--p6);border-color:transparent}
+.btn-lg{padding:15px 30px;font-size:16.5px;min-height:54px}
+.btn-sm{padding:8px 14px;font-size:13.5px;min-height:38px}
+.btn:disabled{opacity:.55;cursor:not-allowed}
+:focus-visible{outline:3px solid rgba(232,80,111,.42);outline-offset:2px}
+
+/* ---------- 卡片 / 屏 ---------- */
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--sh);padding:22px}
+.card+.card{margin-top:16px}
+.screen{display:none;padding:22px 0 8px}
+.screen.on{display:block;animation:screenIn .42s cubic-bezier(.2,.7,.3,1)}
+@keyframes screenIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.eyebrow{display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--p6);
+  background:var(--p2);border-radius:999px;padding:5px 12px}
+.sec-title{display:flex;align-items:center;gap:10px;font-size:17px;font-weight:800;margin-bottom:14px}
+.sec-title .bar{width:4px;height:18px;border-radius:3px;background:var(--grad);flex:0 0 auto}
+.tiny{font-size:13px;color:var(--ink3)}
+
+/* ---------- 首页 ---------- */
+.hero{position:relative;overflow:hidden;border-radius:28px;border:1px solid var(--line);box-shadow:var(--sh);
+  background:linear-gradient(160deg,#FFF1F5 0%,#FFE6EE 44%,#FFF3E9 100%);padding:34px 26px 30px}
+.hero-in{position:relative;z-index:1;text-align:center}
+.hero h1{font-size:clamp(30px,7.4vw,48px);margin:14px 0 0;letter-spacing:.02em}
+.hero h1 em{font-style:normal;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;display:inline-block}
+.hero .lede{max-width:600px;margin:14px auto 0;color:var(--ink2);font-size:15.5px}
+.hero-figs{display:flex;justify-content:center;align-items:flex-end;gap:clamp(2px,2.4vw,20px);margin:20px 0 4px}
+.hero-figs .hf{display:flex;flex-direction:column;align-items:center;gap:6px}
+.hero-figs .hf svg{width:clamp(74px,20vw,116px);height:auto;filter:drop-shadow(0 10px 22px rgba(190,80,110,.22))}
+.hero-figs .hf span{font-size:11.5px;color:var(--ink3);font-weight:700;white-space:nowrap}
+.hero-figs .hf:nth-child(2){transform:translateY(-8px)}
+.hero-stats{display:flex;justify-content:center;gap:clamp(8px,2.6vw,22px);margin:18px 0 2px;flex-wrap:wrap}
+.hero-stats div{background:#fff;border:1px solid var(--line);border-radius:16px;padding:9px 15px;box-shadow:var(--sh)}
+.hero-stats b{display:block;font-size:21px;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-stats span{font-size:11.5px;color:var(--ink3);font-weight:700}
+.hero-cta{display:flex;flex-direction:column;align-items:center;gap:10px;margin-top:20px}
+.hero-cta .meta{font-size:12.5px;color:var(--ink3)}
+.genderbox{margin:16px auto 0;max-width:520px;background:#fff;border:1px solid var(--line);border-radius:20px;padding:14px 16px;box-shadow:var(--sh)}
+.genderbox>p{font-size:13px;font-weight:800;color:var(--p6);margin-bottom:10px;text-align:center}
+.gender-row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.gbtn{flex:1 1 0;min-width:130px;border:1.5px solid var(--line);background:#fff;border-radius:15px;padding:11px 12px;cursor:pointer;
+  transition:.18s;text-align:center;font-family:inherit}
+.gbtn b{display:block;font-size:15px;font-weight:800;color:var(--ink)}
+.gbtn span{display:block;font-size:11.5px;color:var(--ink3);margin-top:2px}
+.gbtn[aria-pressed="true"]{border-color:transparent;background:linear-gradient(135deg,#FFF1F5,#FFE3EC);
+  box-shadow:0 0 0 2px var(--p5) inset}
+.gbtn[aria-pressed="true"] b{color:var(--p6)}
+.resume{margin:16px auto 0;max-width:460px;background:#fff;border:1px dashed #F3C6D6;border-radius:16px;padding:12px 14px;
+  display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:center;font-size:13.5px;color:var(--ink2)}
+.resume b{color:var(--p6)}
+
+.rules-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.rule{display:flex;gap:12px;align-items:flex-start;background:linear-gradient(180deg,#FFFCFD,#FFF7FA);
+  border:1px solid var(--line2);border-radius:16px;padding:14px}
+.rule .n{flex:0 0 auto;width:26px;height:26px;border-radius:9px;background:var(--p2);color:var(--p6);font-weight:800;font-size:13px;
+  display:grid;place-items:center}
+.rule h4{font-size:14px;margin-bottom:3px}
+.rule p{font-size:13px;color:var(--ink2);line-height:1.62}
+
+/* 族群图鉴 */
+.clans{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.clan{position:relative;overflow:hidden;border:1px solid var(--line2);border-radius:20px;padding:12px 10px 11px;text-align:center;
+  background:linear-gradient(180deg,#fff,#FFF7FA);transition:transform .2s ease,box-shadow .2s ease}
+.clan:hover{transform:translateY(-4px);box-shadow:0 14px 26px rgba(190,80,110,.16)}
+.clan svg{width:100%;height:auto;max-width:96px;display:block;margin:0 auto}
+.clan b{display:block;font-size:13.5px;font-weight:800;margin-top:4px}
+.clan span{display:block;font-size:11px;color:var(--ink3);line-height:1.4;margin-top:2px}
+.clan i{display:block;font-size:10.5px;color:var(--p5);font-weight:800;margin-top:3px;font-style:normal}
+
+/* 人物图鉴 */
+.poolhead{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:12px}
+.poolhead .seg{display:flex;gap:6px;background:#FFF3F7;border:1px solid var(--line2);border-radius:999px;padding:4px}
+.poolhead .seg button{border:0;background:transparent;border-radius:999px;padding:6px 14px;font-size:13px;font-weight:800;
+  color:var(--ink3);cursor:pointer;font-family:inherit}
+.poolhead .seg button[aria-pressed="true"]{background:#fff;color:var(--p6);box-shadow:var(--sh)}
+.figlist{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.fcard{background:linear-gradient(180deg,#fff,#FFF8FB);border:1px solid var(--line2);border-radius:16px;padding:11px 13px}
+.fcard b{font-size:14px;font-weight:800}
+.fcard i{font-style:normal;font-size:11px;color:var(--ink3);margin-left:6px}
+.fcard p{font-size:12px;color:var(--ink2);line-height:1.6;margin-top:5px}
+.fcard em{font-style:normal;display:inline-block;font-size:10.5px;color:var(--p6);background:var(--p1);border-radius:6px;
+  padding:1px 6px;margin-top:6px}
+
+.faq p{font-size:14px;color:var(--ink2);margin-bottom:10px}
+.faq b{color:var(--ink)}
+.disc{margin-top:16px;border-radius:16px;background:linear-gradient(180deg,#FFF8F3,#FFF4F6);border:1px solid #F8E4D4;
+  padding:14px 16px;font-size:13px;color:#7C6255;line-height:1.7}
+
+/* ---------- 答题 ---------- */
+.quiz-head{padding:16px 18px}
+.qh-row{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.qh-idx{font-size:14.5px;font-weight:700;color:var(--ink2)}
+.qh-idx b{color:var(--ink);font-size:17px}
+.qh-dim{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:var(--p6);background:var(--p2);
+  border-radius:999px;padding:4px 11px;margin-left:8px;vertical-align:2px}
+.bar{height:9px;border-radius:99px;background:#FBE4EB;overflow:hidden;margin-top:12px}
+.bar i{display:block;height:100%;width:0;border-radius:99px;background:var(--grad);transition:width .34s cubic-bezier(.2,.7,.3,1)}
+.qh-note{font-size:12.5px;color:var(--ink3);margin-top:8px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.sheet{padding:16px 18px}
+.sheet-grid{display:grid;grid-template-columns:repeat(10,1fr);gap:7px}
+.sheet-grid button{aspect-ratio:1/1;border-radius:12px;border:1.5px solid var(--line);background:#fff;color:var(--ink3);
+  font-weight:800;font-size:13.5px;cursor:pointer;transition:.16s;padding:0}
+.sheet-grid button.done{background:linear-gradient(135deg,#FFD9E5,#FFBCCF);border-color:transparent;color:var(--p6)}
+.sheet-grid button.now{box-shadow:0 0 0 2.5px var(--p5);color:var(--p5)}
+.sheet-grid button.miss{animation:miss 1.1s ease 2;border-color:#F0A6A6;color:#D25C5C;background:#FFF5F5}
+@keyframes miss{0%,100%{transform:none}25%{transform:translateX(-3px)}75%{transform:translateX(3px)}}
+.sheet-foot{display:flex;gap:14px;flex-wrap:wrap;margin-top:12px;font-size:12px;color:var(--ink3)}
+.dot-legend{display:inline-flex;align-items:center;gap:6px}
+.dot{width:11px;height:11px;border-radius:50%;border:1.5px solid var(--line);background:#fff;display:inline-block}
+.dot.done{background:linear-gradient(135deg,#FFBCCF,#FF8FAE);border-color:transparent}
+.dot.now{box-shadow:0 0 0 2px var(--p5) inset;border-color:var(--p5)}
+.qcard{padding:24px 24px 22px;margin-top:16px;position:relative;overflow:hidden}
+.qcard.in{animation:cardIn .34s cubic-bezier(.2,.7,.3,1)}
+@keyframes cardIn{from{opacity:0;transform:translateX(14px)}to{opacity:1;transform:none}}
+.q-scene{margin-top:12px;padding:13px 15px;border-radius:15px;background:linear-gradient(135deg,#FFF3F6,#FFF7F2);
+  border:1px solid #FBE3EA;font-size:14.5px;color:var(--ink2);line-height:1.65}
+.q-scene b{color:var(--p6);font-weight:800}
+.q-text{margin-top:14px;font-size:clamp(18px,4.5vw,21px);font-weight:800;line-height:1.5}
+.q-hint{font-size:12.5px;color:var(--ink3);margin-top:9px}
+.opts{display:flex;flex-direction:column;gap:10px;margin-top:18px}
+.opt{display:flex;align-items:center;gap:13px;width:100%;text-align:left;font-size:16px;font-weight:600;color:var(--ink);
+  background:#fff;border:1.5px solid var(--line);border-radius:16px;padding:14px 16px;min-height:56px;cursor:pointer;transition:.18s ease}
+.opt:hover{border-color:#F7C4D4;background:#FFF9FC}
+.opt .rd{width:22px;height:22px;border-radius:50%;border:2px solid #F0D3DD;flex:0 0 auto;display:grid;place-items:center;transition:.18s}
+.opt .txt{flex:1 1 auto}
+.opt .key{font-size:11.5px;color:var(--ink4);border:1px solid var(--line);border-radius:7px;padding:1px 7px;font-weight:700}
+.opt[aria-checked="true"]{border-color:transparent;background:linear-gradient(135deg,#FFF1F5,#FFE3EC);
+  box-shadow:0 0 0 2px var(--p5) inset,0 8px 18px rgba(200,60,100,.13)}
+.opt[aria-checked="true"] .rd{border-color:var(--p5);background:var(--p5)}
+.opt[aria-checked="true"] .rd::after{content:"";width:8px;height:8px;border-radius:50%;background:#fff}
+.qfoot{display:flex;gap:12px;justify-content:space-between;align-items:center;margin:16px 0 4px}
+.qfoot .btn{flex:1 1 auto;max-width:220px}
+.qfoot .btn-primary{flex:1.3 1 auto;max-width:280px}
+.kbd-tip{text-align:center;font-size:12px;color:var(--ink4);margin-top:10px}
+
+/* ---------- 结果 ---------- */
+.res-hero{position:relative;overflow:hidden;text-align:center;padding:28px 24px 26px;
+  background:linear-gradient(160deg,#FFF1F5 0%,#FFE6EE 50%,#FFF4EA 100%)}
+.res-hero .in{position:relative;z-index:1}
+.res-fig{width:clamp(148px,42vw,216px);height:auto;display:block;margin:0 auto;
+  filter:drop-shadow(0 16px 30px rgba(190,80,110,.24))}
+.seal{display:inline-block;margin-top:6px;padding:7px 14px;border-radius:10px;border:2px solid var(--p5);color:var(--p5);
+  font-weight:900;font-size:13px;letter-spacing:.18em;animation:sealIn .7s cubic-bezier(.2,.8,.3,1) both}
+.res-name{font-size:clamp(28px,7.4vw,42px);margin-top:8px;letter-spacing:.04em}
+.res-dyn{font-size:13.5px;color:var(--p6);font-weight:800;letter-spacing:.06em;margin-top:4px}
+.res-clan{display:inline-flex;align-items:center;gap:8px;margin-top:12px;background:#fff;border:1px solid var(--line);
+  border-radius:999px;padding:6px 15px;font-size:13px;font-weight:800;box-shadow:var(--sh)}
+.res-tag{font-size:15.5px;color:var(--ink2);margin-top:14px;max-width:560px;margin-left:auto;margin-right:auto}
+.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:14px}
+.chip{font-size:12.5px;font-weight:700;color:var(--ink2);background:#fff;border:1px solid var(--line);border-radius:999px;padding:5px 12px}
+.fit{display:inline-flex;align-items:center;gap:12px;margin-top:14px;background:#fff;border:1px solid var(--line);
+  border-radius:999px;padding:8px 16px 8px 18px;box-shadow:var(--sh)}
+.fit .num{font-size:23px;font-weight:800;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1}
+.fit .lab{font-size:12px;color:var(--ink3);text-align:left;line-height:1.3}
+.hybrid{margin-top:14px;font-size:13.5px;color:#8A4A60;background:#FFF1F5;border:1px solid #FBD6E2;border-radius:14px;
+  padding:11px 15px;text-align:left;line-height:1.7}
+.dims{display:grid;grid-template-columns:minmax(0,268px) minmax(0,1fr);gap:22px;align-items:start}
+.radar{width:100%;height:auto;display:block}
+.dim{display:flex;flex-direction:column;gap:6px;padding:11px 0;border-bottom:1px dashed var(--line)}
+.dim:last-child{border-bottom:0;padding-bottom:0}
+.dim:first-child{padding-top:0}
+.dim-h{display:flex;align-items:baseline;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.dim-h b{font-size:15px}
+.dim-h .lv{font-size:12px;font-weight:800;border-radius:999px;padding:3px 10px}
+.lv.high{color:#B92A50;background:#FFDCE7}
+.lv.mid{color:#8A5A66;background:#FFE9EF}
+.lv.low{color:#2F7F6C;background:#E2F6F1}
+.dim-bar{height:8px;border-radius:99px;background:#FBE4EB;overflow:hidden}
+.dim-bar i{display:block;height:100%;border-radius:99px;background:var(--grad)}
+.dim p{font-size:13.5px;color:var(--ink2);line-height:1.66}
+.dim .sc{font-size:12.5px;color:var(--ink3);font-weight:700}
+.factbox{margin-top:14px;background:linear-gradient(135deg,#FFF6EC,#FFF1F5);border:1px solid #F6E3D2;border-radius:16px;
+  padding:14px 16px;font-size:13.5px;color:#7C6252;line-height:1.75}
+.factbox b{color:#A9762F}
+.clanbox{background:linear-gradient(180deg,#fff,#FFF8FB);border:1px solid var(--line2);border-radius:18px;padding:16px 18px}
+.clanbox h4{font-size:15px;color:var(--p6);display:flex;align-items:center;gap:8px}
+.clanbox p{font-size:13.5px;color:var(--ink2);line-height:1.75;margin-top:8px}
+.kp2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+.kp2 div{background:#fff;border:1px solid var(--line2);border-radius:14px;padding:12px 14px}
+.kp2 b{font-size:13.5px}
+.kp2 p{font-size:13px;color:var(--ink2);line-height:1.65;margin-top:5px}
+ul.list{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:9px}
+ul.list li{position:relative;padding-left:24px;font-size:14px;color:var(--ink2);line-height:1.68}
+ul.list li::before{content:"";position:absolute;left:6px;top:.62em;width:7px;height:7px;border-radius:50%;background:var(--grad)}
+.rank{display:flex;flex-direction:column;gap:11px}
+.rk{display:grid;grid-template-columns:22px 1fr auto;gap:10px;align-items:center}
+.rk .no{font-size:12.5px;font-weight:800;color:var(--ink3);text-align:center}
+.rk .nm{font-size:14px;font-weight:700;margin-bottom:5px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.rk .nm .badge{font-size:10.5px;font-weight:800;color:#fff;background:var(--grad);border-radius:999px;padding:1.5px 8px}
+.rk .track{height:9px;border-radius:99px;background:#FBE4EB;overflow:hidden}
+.rk .track i{display:block;height:100%;border-radius:99px;background:linear-gradient(135deg,#FFBCCF,#FF8FAE)}
+.rk.first .track i{background:var(--grad)}
+.rk .pc{font-size:13.5px;font-weight:800;color:var(--ink2);font-variant-numeric:tabular-nums}
+.sameclan{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.sameclan .sc{background:linear-gradient(180deg,#fff,#FFF8FB);border:1px solid var(--line2);border-radius:14px;padding:11px 13px}
+.sameclan .sc b{font-size:13.5px}
+.sameclan .sc i{font-style:normal;font-size:11px;color:var(--ink3);margin-left:6px}
+.sameclan .sc p{font-size:12.5px;color:var(--ink2);line-height:1.6;margin-top:4px}
+.answers summary{cursor:pointer;font-weight:800;font-size:15px;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:10px}
+.answers summary::-webkit-details-marker{display:none}
+.answers summary .arw{transition:transform .2s;color:var(--ink3);font-size:13px}
+.answers[open] summary .arw{transform:rotate(180deg)}
+.anslist{margin-top:14px;display:flex;flex-direction:column;gap:9px}
+.ans{display:grid;grid-template-columns:26px 1fr;gap:10px;font-size:13.5px;padding:10px;border-radius:12px;background:#FFFAFC;border:1px solid var(--line2)}
+.ans .i{font-weight:800;color:var(--ink3);font-size:12.5px}
+.ans .q{color:var(--ink2);line-height:1.55}
+.ans .a{margin-top:4px;font-size:12.5px;font-weight:800;color:var(--p6)}
+.ans .a .tag{font-weight:700;color:#8A5A66;background:#FFE9EF;border-radius:6px;padding:1px 6px;margin-left:6px;font-size:11px}
+.res-actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin:18px 0 6px}
+.quality{display:flex;gap:11px;align-items:flex-start;background:linear-gradient(180deg,#FFFBF3,#FFF8F0);border:1px solid #F6E6CB;
+  border-radius:16px;padding:13px 15px;font-size:13.5px;color:#7C6A4E;line-height:1.7;margin-top:16px}
+.quality .qi{flex:0 0 auto;width:22px;height:22px;border-radius:50%;background:#F8E7C4;color:#8A6A28;font-weight:800;font-size:13px;display:grid;place-items:center}
+
+/* ---------- 结果图 ---------- */
+.poster{position:fixed;inset:0;z-index:110;display:flex;align-items:center;justify-content:center;padding:18px;
+  background:rgba(58,42,49,.72);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.poster-panel{display:flex;flex-direction:column;width:100%;max-width:430px;max-height:92vh;overflow:hidden;
+  background:#fff;border-radius:24px;box-shadow:0 24px 60px rgba(58,20,36,.35)}
+.poster-head{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:14px 16px;
+  border-bottom:1px solid var(--line2);font-weight:800;font-size:15px}
+.poster-x{width:34px;height:34px;border:0;border-radius:50%;background:#FBEAF0;color:var(--ink2);font-size:20px;cursor:pointer}
+.poster-body{overflow:auto;padding:14px;background:#FFF7FA}
+.poster-body img{display:block;width:100%;height:auto;border-radius:14px;box-shadow:0 8px 22px rgba(190,80,110,.20);
+  -webkit-touch-callout:default}
+.poster-foot{padding:12px 16px 16px;text-align:center;border-top:1px solid var(--line2)}
+.poster-tip{font-size:12.5px;color:var(--ink3);margin-bottom:10px;line-height:1.65}
+.poster-foot .btn{width:100%}
+body.poster-open{overflow:hidden}
+
+/* ---------- 提示 / 页脚 ---------- */
+.toast{position:fixed;left:50%;top:70px;transform:translate(-50%,-14px);z-index:90;max-width:min(92vw,460px);
+  background:rgba(58,42,49,.94);color:#fff;font-size:14px;font-weight:600;line-height:1.5;border-radius:14px;padding:12px 18px;
+  box-shadow:0 16px 34px rgba(58,42,49,.30);transition:opacity .28s,transform .28s,visibility .28s;text-align:center;
+  opacity:0;visibility:hidden;pointer-events:none}
+.toast.on{opacity:1;visibility:visible;transform:translate(-50%,0)}
+.foot{padding:30px 0 44px;text-align:center;font-size:12.5px;color:var(--ink4);line-height:1.8}
+
+@media (max-width:820px){
+  .clans{grid-template-columns:repeat(3,1fr)}
+  .figlist{grid-template-columns:repeat(2,1fr)}
+  .dims{grid-template-columns:1fr;gap:10px}
+  .radar{max-width:320px;margin:0 auto}
+}
+@media (max-width:640px){
+  .wrap{padding:0 14px}
+  .card{padding:18px;border-radius:19px}
+  .hero{padding:26px 18px 24px;border-radius:23px}
+  .screen{padding:16px 0 6px}
+  .rules-grid{grid-template-columns:1fr}
+  .qcard{padding:20px 17px 18px}
+  .qfoot{gap:10px}
+  .qfoot .btn{max-width:none;padding:13px 12px;font-size:14.5px}
+  .res-hero{padding:22px 17px}
+  .sheet-grid{grid-template-columns:repeat(10,1fr);gap:5px}
+  .sheet-grid button{border-radius:9px;font-size:12px}
+  .rk{grid-template-columns:18px 1fr auto;gap:8px}
+  .ans{grid-template-columns:22px 1fr}
+  .key{display:none}
+  .res-actions{flex-direction:column}
+  .res-actions .btn{width:100%;max-width:none}
+  .clans{grid-template-columns:repeat(2,1fr)}
+  .figlist{grid-template-columns:1fr}
+  .kp2,.sameclan{grid-template-columns:1fr}
+  .hero-figs{gap:4px}
+  .hero-figs .hf svg{width:clamp(78px,23vw,104px)}
+  .kbd-tip{display:none}
+}
+@media (max-width:360px){
+  .sheet-grid{grid-template-columns:repeat(5,1fr)}
+  .clans{grid-template-columns:repeat(2,1fr)}
+}
+</style>
+</head>
+<body>
+
+<noscript>
+  <div class="nojs">
+    <b>⚠ 这个测评需要 JavaScript 才能答题，当前页面是「预览模式」</b>
+    <p>你现在很可能是在<b>文件预览</b>里打开的（飞书 / 微信 / iOS 文件 App / 邮件附件的预览都不执行 JavaScript），所以插画不会显示、按钮也点不动。</p>
+    <p><b>正确打开方式：</b>把 <code>index.html</code> 下载到<b>电脑</b>上，再用 Chrome / Edge / Safari 双击打开；或直接访问分享者给你的网址。</p>
+  </div>
+</noscript>
+
+<div class="gate" id="gate" hidden>
+  <div class="gate-card">
+    <svg class="gate-heart" viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="gh" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E8506F"/><stop offset="1" stop-color="#FF8FAE"/></linearGradient></defs><rect width="32" height="32" rx="9" fill="url(#gh)"/><path d="M16 24.5c-5.2-3.5-8.3-6.4-8.3-9.9A4.6 4.6 0 0 1 16 11.2a4.6 4.6 0 0 1 8.3 3.4c0 3.5-3.1 6.4-8.3 9.9z" fill="#fff"/></svg>
+    <h2>你在古代是谁</h2>
+    <p class="gate-sub">这是一个私享测评<br>请输入分享者给你的访问口令</p>
+    <input class="gate-input" id="gate-input" type="password" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="访问口令" aria-label="访问口令">
+    <button class="btn btn-primary btn-lg" id="gate-btn">进入测评</button>
+    <p class="gate-err" id="gate-err" role="alert"></p>
+    <p class="gate-tip">口令验证在你自己手机上完成，不会上传任何信息<br>验证一次后本次浏览不再重复询问</p>
+  </div>
+</div>
+
+<header class="topbar">
+  <div class="wrap topbar-in">
+    <div class="brand">
+      <svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="url(#lg)"/><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E8506F"/><stop offset="1" stop-color="#FF8FAE"/></linearGradient></defs><path d="M16 24.5c-5.2-3.5-8.3-6.4-8.3-9.9A4.6 4.6 0 0 1 16 11.2a4.6 4.6 0 0 1 8.3 3.4c0 3.5-3.1 6.4-8.3 9.9z" fill="#fff"/></svg>
+      <span>你在古代是谁<small> · 原创自评</small></span>
+    </div>
+    <button class="btn btn-ghost btn-sm" id="top-home" hidden>返回首页</button>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ================= 首页 ================= -->
+  <section class="screen on" id="s-home">
+    <div class="hero">
+      <div class="petals" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="hero-in">
+        <span class="eyebrow">20 道情境题 · 12 大风骨 · 60 位古代人物</span>
+        <h1>你在古代<br><em>是谁？</em></h1>
+        <p class="lede">用「进取心 · 决断力 · 情义值 · 表达欲 · 处世道」五个维度读出你的性情，再在 <b id="type-count-1">60</b> 位古代人物中，找出与你最像的那一位。</p>
+        <div class="hero-figs" id="hero-figs" aria-hidden="true"></div>
+        <div class="hero-stats">
+          <div><b>60</b><span>位古代人物</span></div>
+          <div><b>12</b><span>大风骨族群</span></div>
+          <div><b>20</b><span>道情境题</span></div>
+        </div>
+        <div class="genderbox">
+          <p>第一步：选择要匹配的人物库</p>
+          <div class="gender-row" role="group" aria-label="人物库">
+            <button class="gbtn" id="g-f" type="button" aria-pressed="false" data-pool="f"><b>女性人物</b><span>30 位 · 从班昭到武则天</span></button>
+            <button class="gbtn" id="g-m" type="button" aria-pressed="false" data-pool="m"><b>男性人物</b><span>30 位 · 从苏轼到霍去病</span></button>
+            <button class="gbtn" id="g-all" type="button" aria-pressed="true" data-pool="all"><b>全部人物</b><span>60 位 · 不限性别匹配</span></button>
+          </div>
+        </div>
+        <div class="hero-cta">
+          <button class="btn btn-primary btn-lg" id="btn-start">开始测试</button>
+          <span class="meta">结果由你的选择直接计算 · 无随机 · 不上传任何数据</span>
+        </div>
+        <div class="resume" id="resume-box" hidden>
+          <span>检测到上次未完成的作答：已答 <b id="resume-n">0</b> / <b id="resume-t">20</b> 题</span>
+          <button class="btn btn-soft btn-sm" id="btn-resume">继续作答</button>
+          <button class="btn btn-ghost btn-sm" id="btn-clear">清空重来</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="sec-title"><i class="bar"></i>计分规则（完全公开）</div>
+      <div class="rules-grid">
+        <div class="rule"><span class="n">1</span><div><h4>每题 5 档</h4><p>从「很不像我」到「非常像我」，依次记为 0 / 25 / 50 / 75 / 100 分。</p></div></div>
+        <div class="rule"><span class="n">2</span><div><h4>正反向题各半</h4><p>每个维度 4 题，其中 2 题正向、2 题反向（反向题按「100 减去该题得分」计算），避免「全选同意」就得高分。</p></div></div>
+        <div class="rule"><span class="n">3</span><div><h4>五个维度</h4><p>同维度 4 题取平均，得到 0–100 的维度分：进取心、决断力、情义值、表达欲、处世道。</p></div></div>
+        <div class="rule"><span class="n">4</span><div><h4>两级匹配，不随机</h4><p>先用五维画像定位到 12 大风骨族群中最接近的一族；再在该族群内与你选定的人物库逐一比对，得到最像你的那一位。契合度 = 100 − 距离。</p></div></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="sec-title"><i class="bar"></i>12 大风骨族群</div>
+      <p class="tiny" style="margin:-6px 0 14px">每位古代人物都归属其中一族。插画为原创矢量图，人物会轻轻浮动。</p>
+      <div class="clans" id="clans"></div>
+    </div>
+
+    <div class="card">
+      <div class="sec-title"><i class="bar"></i><span id="type-count-2">60</span> 位古代人物</div>
+      <p class="tiny" style="margin:-6px 0 14px">男女各 30 位。你可以先选人物库再答题，也可以在结果页确认自己是被哪一族、哪一位「认领」的。</p>
+      <details class="answers">
+        <summary>展开 / 收起 60 位人物名单<span class="arw">▾</span></summary>
+      <div class="poolhead" style="margin-top:14px">
+        <div class="seg" role="group" aria-label="筛选人物库">
+          <button type="button" data-pool="f" aria-pressed="false">女性 30 位</button>
+          <button type="button" data-pool="m" aria-pressed="false">男性 30 位</button>
+          <button type="button" data-pool="all" aria-pressed="true">全部 60 位</button>
+        </div>
+        <span class="tiny" id="pool-count">共 60 位</span>
+      </div>
+      <div class="figlist" id="figlist"></div>
+      </details>
+    </div>
+
+    <div class="card faq">
+      <div class="sec-title"><i class="bar"></i>关于这份测评</div>
+      <p><b>这是什么？</b>一份原创的性格自评，用古代人物做比喻，帮你从五个维度看清自己的性情倾向。</p>
+      <p><b>有标准答案吗？</b>没有。这不是历史知识问答，也没有对错；每个人物只是某种性情的比喻，<b>不代表你「就是」他/她</b>。每个人物都附了一条真实史实小知识，供你顺带认识一下。</p>
+      <p><b>结果可靠吗？</b>结果只反映你这 20 题的选择倾向，会被当时的心情影响。请把它当成一面镜子，而不是一份鉴定书。</p>
+      <p><b>隐私？</b>题目与算法都在这一个 HTML 文件里，不联网、不上传；作答记录只保存在你本机浏览器的本地存储中。</p>
+      <div class="disc"><b>重要说明：</b>本测评为原创娱乐性自我探索内容，<b>不是心理测验、不构成心理测评或专业诊断</b>，也不对历史人物作任何评价，不能替代心理咨询或医疗建议。如果你正被情绪或关系问题长期困扰，请寻求专业心理帮助。</div>
+    </div>
+  </section>
+
+  <!-- ================= 答题页 ================= -->
+  <section class="screen" id="s-quiz">
+    <div class="card quiz-head">
+      <div class="qh-row">
+        <div>
+          <span class="qh-idx">第 <b id="q-idx">1</b> / <b id="q-total">20</b> 题</span>
+          <span class="qh-dim" id="q-dim">维度</span>
+          <span class="qh-dim" id="q-pool" style="background:#FFF1E6;color:#A9762F">全部人物</span>
+        </div>
+        <button class="btn btn-ghost btn-sm" id="btn-sheet" aria-expanded="false" aria-controls="sheet">答题卡</button>
+      </div>
+      <div class="bar" role="progressbar" aria-labelledby="q-note" aria-valuemin="0" aria-valuemax="20" aria-valuenow="0" id="q-progress"><i id="q-bar"></i></div>
+      <div class="qh-note" id="q-note">已完成 0 / 20</div>
+    </div>
+
+    <div class="card sheet" id="sheet" hidden>
+      <div class="sec-title" style="font-size:15px"><i class="bar"></i>答题卡 · 点题号可跳转修改</div>
+      <div class="sheet-grid" id="sheet-grid"></div>
+      <div class="sheet-foot">
+        <span class="dot-legend"><i class="dot done"></i>已答</span>
+        <span class="dot-legend"><i class="dot"></i>未答</span>
+        <span class="dot-legend"><i class="dot now"></i>当前题</span>
+      </div>
+    </div>
+
+    <div class="card qcard" id="qcard"></div>
+
+    <div class="qfoot">
+      <button class="btn btn-ghost" id="btn-prev">上一题</button>
+      <button class="btn btn-primary" id="btn-next">下一题</button>
+    </div>
+    <div class="kbd-tip" id="kbd-tip">小提示：电脑上可按 1–5 选择答案，← → 切换题目</div>
+  </section>
+
+  <!-- ================= 结果页 ================= -->
+  <section class="screen" id="s-result">
+    <div id="result-body"></div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    你在古代是谁 · 原创性格自评 · 结果由你的选择计算，无随机<br>
+    仅供自我探索与娱乐，不构成心理测评或专业诊断，也不评价历史人物
+  </div>
+</footer>
+
+<div class="poster" id="poster" hidden role="dialog" aria-modal="true" aria-label="结果图">
+  <div class="poster-panel">
+    <div class="poster-head"><span>我的古代人物</span>
+      <button class="poster-x" id="poster-close" type="button" aria-label="关闭">×</button></div>
+    <div class="poster-body"><img id="poster-img" alt="古代人物测评结果图"></div>
+    <div class="poster-foot">
+      <p class="poster-tip" id="poster-tip">正在生成结果图…</p>
+      <a class="btn btn-primary" id="poster-dl" download="古代人物结果.png" hidden>下载图片</a>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+'use strict';
+
+/* =========================================================
+   0. 配置
+   ========================================================= */
+/* ===== GATE_CONFIG_START 口令门配置（改密码只改这一段：从上面这行注释到下面 END 注释，整段替换）===== */
+var GATE = {
+  enabled: true,   // 改成 false 就彻底关闭口令门
+  iter: 20000,
+  salt: '720329ebaae69ffc',
+  hash: '0a301f058a26653bff5b3a4def59a32e25ab3f61306054ffd1c008e027db115e'
+};
+/* ===== GATE_CONFIG_END ===== */
+/* ===== SITE_CONFIG_START（部署后把网址填这里，会印在结果图上）===== */
+var SITE = { url: '', tip: '长按图片保存到相册，看看朋友是谁' };
+/* ===== SITE_CONFIG_END ===== */
+
+function sha256Hex(str){
+  function rr(x, n){ return (x >>> n) | (x << (32 - n)); }
+  var K = [0x428a2f98,0x71374491,0xb5c0fbcf,0xe9b5dba5,0x3956c25b,0x59f111f1,0x923f82a4,0xab1c5ed5,
+           0xd807aa98,0x12835b01,0x243185be,0x550c7dc3,0x72be5d74,0x80deb1fe,0x9bdc06a7,0xc19bf174,
+           0xe49b69c1,0xefbe4786,0x0fc19dc6,0x240ca1cc,0x2de92c6f,0x4a7484aa,0x5cb0a9dc,0x76f988da,
+           0x983e5152,0xa831c66d,0xb00327c8,0xbf597fc7,0xc6e00bf3,0xd5a79147,0x06ca6351,0x14292967,
+           0x27b70a85,0x2e1b2138,0x4d2c6dfc,0x53380d13,0x650a7354,0x766a0abb,0x81c2c92e,0x92722c85,
+           0xa2bfe8a1,0xa81a664b,0xc24b8b70,0xc76c51a3,0xd192e819,0xd6990624,0xf40e3585,0x106aa070,
+           0x19a4c116,0x1e376c08,0x2748774c,0x34b0bcb5,0x391c0cb3,0x4ed8aa4a,0x5b9cca4f,0x682e6ff3,
+           0x748f82ee,0x78a5636f,0x84c87814,0x8cc70208,0x90befffa,0xa4506ceb,0xbef9a3f7,0xc67178f2];
+  var H = [0x6a09e667,0xbb67ae85,0x3c6ef372,0xa54ff53a,0x510e527f,0x9b05688c,0x1f83d9ab,0x5be0cd19];
+  var bytes = [], i, c;
+  for (i = 0; i < str.length; i++){
+    c = str.charCodeAt(i);
+    if (c < 0x80){ bytes.push(c); }
+    else if (c < 0x800){ bytes.push(0xc0 | (c >> 6), 0x80 | (c & 63)); }
+    else if (c < 0xd800 || c >= 0xe000){ bytes.push(0xe0 | (c >> 12), 0x80 | ((c >> 6) & 63), 0x80 | (c & 63)); }
+    else { i++; var cp = 0x10000 + (((c & 0x3ff) << 10) | (str.charCodeAt(i) & 0x3ff));
+      bytes.push(0xf0 | (cp >> 18), 0x80 | ((cp >> 12) & 63), 0x80 | ((cp >> 6) & 63), 0x80 | (cp & 63)); }
+  }
+  var bitLen = bytes.length * 8;
+  bytes.push(0x80);
+  while (bytes.length % 64 !== 56){ bytes.push(0); }
+  bytes.push(0,0,0,0,(bitLen>>>24)&255,(bitLen>>>16)&255,(bitLen>>>8)&255,bitLen&255);
+  var w = new Array(64);
+  for (var off = 0; off < bytes.length; off += 64){
+    for (var t = 0; t < 16; t++){ w[t] = (bytes[off+t*4]<<24)|(bytes[off+t*4+1]<<16)|(bytes[off+t*4+2]<<8)|bytes[off+t*4+3]; }
+    for (t = 16; t < 64; t++){
+      var s0 = rr(w[t-15],7)^rr(w[t-15],18)^(w[t-15]>>>3);
+      var s1 = rr(w[t-2],17)^rr(w[t-2],19)^(w[t-2]>>>10);
+      w[t] = (w[t-16]+s0+w[t-7]+s1)|0;
+    }
+    var a=H[0],b=H[1],cc=H[2],d=H[3],e=H[4],f=H[5],g=H[6],h=H[7];
+    for (t = 0; t < 64; t++){
+      var S1 = rr(e,6)^rr(e,11)^rr(e,25), ch = (e&f)^(~e&g);
+      var t1 = (h+S1+ch+K[t]+w[t])|0;
+      var S0 = rr(a,2)^rr(a,13)^rr(a,22), mj = (a&b)^(a&cc)^(b&cc);
+      var t2 = (S0+mj)|0;
+      h=g; g=f; f=e; e=(d+t1)|0; d=cc; cc=b; b=a; a=(t1+t2)|0;
+    }
+    H[0]=(H[0]+a)|0;H[1]=(H[1]+b)|0;H[2]=(H[2]+cc)|0;H[3]=(H[3]+d)|0;
+    H[4]=(H[4]+e)|0;H[5]=(H[5]+f)|0;H[6]=(H[6]+g)|0;H[7]=(H[7]+h)|0;
+  }
+  var out = '';
+  for (var k = 0; k < 8; k++){ out += ('00000000' + (H[k] >>> 0).toString(16)).slice(-8); }
+  return out;
+}
+function hashPassword(pw, salt, iter){
+  var h = sha256Hex(salt + '|' + pw);
+  for (var i = 1; i < iter; i++){ h = sha256Hex(salt + '|' + h); }
+  return h;
+}
+var GATE_KEY = 'ancient-who-gate-ok';
+function gateNeeded(){
+  if (typeof GATE === 'undefined' || !GATE || !GATE.enabled) return false;
+  try{ if (sessionStorage.getItem(GATE_KEY) === GATE.hash) return false; sessionStorage.removeItem(GATE_KEY); }catch(e){}
+  return true;
+}
+function showGate(onPass){
+  var gate = document.getElementById('gate'), card = gate.querySelector('.gate-card');
+  var input = document.getElementById('gate-input'), btn = document.getElementById('gate-btn'), err = document.getElementById('gate-err');
+  var tries = 0, busy = false;
+  document.body.classList.add('gated');
+  gate.hidden = false;
+  setTimeout(function(){ try{ input.focus(); }catch(e){} }, 60);
+  function fail(msg){ err.textContent = msg; card.classList.remove('shake'); void card.offsetWidth; card.classList.add('shake'); input.value = ''; try{ input.focus(); }catch(e){} }
+  function submit(){
+    if (busy) return;
+    var pw = input.value;
+    if (!pw){ fail('请先输入访问口令'); return; }
+    busy = true; btn.disabled = true; err.textContent = '正在校验…';
+    setTimeout(function(){
+      if (hashPassword(pw, GATE.salt, GATE.iter) === GATE.hash){
+        try{ sessionStorage.setItem(GATE_KEY, GATE.hash); }catch(e){}
+        gate.hidden = true; document.body.classList.remove('gated'); btn.disabled = false; busy = false; onPass();
+      } else {
+        tries++; btn.disabled = false; busy = false;
+        fail(tries >= 5 ? ('口令不对（已错误 ' + tries + ' 次，请向分享者确认）') : '口令不对，请再试一次');
+      }
+    }, 30);
+  }
+  btn.addEventListener('click', submit);
+  input.addEventListener('keydown', function(e){ if (e.key === 'Enter'){ e.preventDefault(); submit(); } });
+}
+
+/* =========================================================
+   1. 五个维度
+   ========================================================= */
+var DIMS = [
+  { key:'ambition', name:'进取心', low:'淡泊', high:'进取', brief:'你多想做出成绩、被人记住',
+    texts:{ high:'你心里始终有一团火：想做出成绩、想被记住、想往上走。这让你行动力强，也容易把自己逼得太紧。',
+            mid:'你有追求，但不执着于名次；该争的时候会争，该退的时候也退得下来。',
+            low:'你更在意日子过得顺不顺，而不是赢不赢。这份淡泊让你活得松弛，也可能让机会从手边溜走。' } },
+  { key:'decision', name:'决断力', low:'柔缓', high:'果决', brief:'遇到事情你拍板有多快',
+    texts:{ high:'你拍板极快：信息不全也敢先动手，边做边调。这让你抓住机会，也可能踩到没看清的坑。',
+            mid:'你会权衡，但不会无限拖延；该定的时候能定下来。',
+            low:'你习惯反复权衡、多方求证。这让你少犯错，也容易错过窗口期。' } },
+  { key:'loyalty', name:'情义值', low:'自持', high:'重情', brief:'你愿意为在乎的人付出多少',
+    texts:{ high:'你把情义看得很重：答应的事一定做到，在乎的人愿意让出利益。这是你最动人的地方，也最容易被人消耗。',
+            mid:'你重感情，也守得住自己的边界，付出之前会先看对方值不值得。',
+            low:'你习惯把感情放在理性的框架里，不太会为谁牺牲自己的计划。这让你清醒，也容易被说成"冷"。' } },
+  { key:'express', name:'表达欲', low:'内敛', high:'外放', brief:'你有多想让别人看见你',
+    texts:{ high:'你有想法就说、有本事就亮，希望被看见、被欣赏。这让你容易被记住，也要留意锋芒太露。',
+            mid:'你会看场合表达：该说的时候说，该收的时候收。',
+            low:'你习惯藏锋：有本事不必让人知道，自己心里清楚就行。这很有风骨，也可能让机会找不到你。' } },
+  { key:'social', name:'处世道', low:'孤高', high:'圆融', brief:'你与人相处的姿态',
+    texts:{ high:'你善于与人相处：不认同也能把场面处理得体。这让你路走得更宽，也要小心把自己活成了"谁都可以"。',
+            mid:'你既不刻意迎合，也不刻意疏远，关系保持在舒服的距离上。',
+            low:'你宁愿一个人待着，也懒得维持表面关系。这份孤高让你干净，也可能让你错过一些本可同行的人。' } }
+];
+
+/* =========================================================
+   2. 12 大风骨族群
+   ========================================================= */
+var CLANS = [
+  { id:'emperor', name:'帝王气象', tag:'我要的是天下，不是安稳。', v:[95,92,15,50,50],
+    desc:'你把目标看得比情绪重：认准了就全力推进，不太在意沿途的评价。', good:'目标清晰、抗压、敢下重注', bad:'容易忽略身边人的感受，也容易把自己逼到无退路' },
+  { id:'general', name:'沙场将帅', tag:'我守的是城，也是我的人。', v:[92,95,60,40,12],
+    desc:'你决断极快、行动力强，肯为信任的人扛事，但不太愿意花时间应酬。', good:'执行力强、有担当、能带队', bad:'太直、不懂迂回，容易在人际上吃亏' },
+  { id:'strategist', name:'权谋宰辅', tag:'我在后方把局布好。', v:[88,70,90,15,60],
+    desc:'你能谋事也能扛责，喜欢把复杂的事拆成可执行的步骤，不太爱出风头。', good:'周全、可靠、能承接重任', bad:'操心太多、放不下，容易累到自己' },
+  { id:'craftsman', name:'实干巧匠', tag:'我想把事情做得更好用一点。', v:[80,60,45,20,95],
+    desc:'你务实、肯琢磨，喜欢把手上的东西一点点改到顺手，人情上也圆融。', good:'能把想法落地，改进能力极强', bad:'太务实，容易忽略看不见的价值（情绪、审美）' },
+  { id:'hermit', name:'隐逸高士', tag:'我想要的其实不多。', v:[8,45,50,15,8],
+    desc:'你不争不抢，需要大量独处时间，宁可清简也不愿屈就。', good:'自洽、干净、不容易被外界带节奏', bad:'退得太快，容易把机会和关系一起关在门外' },
+  { id:'proud', name:'孤高傲骨', tag:'我不说话，但你知道我什么意思。', v:[20,55,55,75,12],
+    desc:'你有才气也有骨气，看不上的人和事懒得应付，表达却不含糊。', good:'有原则、有才华、不做违心的事', bad:'孤高容易变成孤立，机会常常毁在"不屑"上' },
+  { id:'knight', name:'江湖侠客', tag:'答应你的事，我一定做到。', v:[50,95,95,35,10],
+    desc:'你把情义看得极重，行动果决，认人就认到底，不太在乎规矩和场面。', good:'重诺、仗义、说到做到', bad:'太讲义气，容易被不值得的人消耗' },
+  { id:'healer', name:'仁心医者', tag:'我想真的帮到人。', v:[62,25,95,35,92],
+    desc:'你把"有用"看得比"厉害"重要：耐心、细致、愿意长期投入，也善于和人相处。', good:'专业、利他、能长期坚持', bad:'太顾及别人，容易忽略自己的需要' },
+  { id:'virtue', name:'贤德圆融', tag:'我劝得住人，也护得住人。', v:[10,40,92,25,98],
+    desc:'你温和、周到、不争功，是关系里的润滑剂，关键时刻却能替人挡事。', good:'高情商、能托底、让人安心', bad:'太懂事，容易把自己活成背景' },
+  { id:'literati', name:'旷达文人', tag:'一蓑烟雨任平生。', v:[55,25,70,88,95],
+    desc:'你有才情也有生活感：能表达、会自嘲，再难的日子也能过出滋味。', good:'表达力强、韧性好、会生活', bad:'太随性，容易没有落点、错过该争的时候' },
+  { id:'roamer', name:'诗词浪子', tag:'我不想过重复的日子。', v:[20,10,85,98,55],
+    desc:'你重感受、爱自由，才华外放，不太按计划走，也不太愿意被安排。', good:'有灵气、真诚、感染力强', bad:'缺少落点，才华容易散掉，感情也容易起伏' },
+  { id:'artist', name:'丹青乐师', tag:'我把一门手艺练到极致。', v:[70,30,55,95,40],
+    desc:'你在意作品和技艺，愿意为一件事反复打磨，也渴望被看见。', good:'专业度极高、有审美、有感染力', bad:'太在意评价，容易为了被看见而耗掉自己' }
+];
+
+/* =========================================================
+   3. 60 位古代人物（g: m/f，c: 族群，o: 族群内的偏移）
+   ========================================================= */
+var FIGURES = [
+  { n:'秦始皇', d:'秦', g:'m', c:'emperor', o:[0,0,28,28,0], t:'我要的是天下一统，不是一时安稳。', k:['强势','目标极清','不受约束'],
+    f:'统一六国后，推行书同文、车同轨、统一度量衡。', a:['把目标写下来，别只放在心里','强势之前，先算清代价','给身边人留出说"不"的空间'] },
+  { n:'汉武帝', d:'西汉', g:'m', c:'emperor', o:[0,-32,0,32,0], t:'宁可做错，也不做小。', k:['雄心','敢用人','不留退路'],
+    f:'派张骞出使西域，打通了丝绸之路。', a:['敢于投入，但别一次押光筹码','在成绩最好的时候学会收手','做决定前，听一句反对意见'] },
+  { n:'曹操', d:'东汉末', g:'m', c:'emperor', o:[0,0,-15,0,-28], t:'宁我负人，不教人负我。', k:['务实','决断快','不装'],
+    f:'写下《短歌行》，也写下"唯才是举"。', a:['效率优先，但别省掉沟通','承认自己的野心，反而更被信任','给对手留台阶，就是给自己留余地'] },
+  { n:'武则天', d:'唐', g:'f', c:'emperor', o:[5,8,0,0,0], t:'这条路没人走过，那我就自己走。', k:['意志极强','不认命','掌控'],
+    f:'中国历史上唯一的女性皇帝，年号与文字都自己改。', a:['别等许可，先做出结果','权力用来做事，而不是用来证明','给自己留一个能卸下盔甲的地方'] },
+  { n:'吕后', d:'西汉', g:'f', c:'emperor', o:[-32,0,0,0,32], t:'我可以忍很久，但我记得很清楚。', k:['隐忍','刚毅','手腕硬'],
+    f:'刘邦去世后临朝称制，稳住了汉初的局面。', a:['把聪明用在正事上，收益更久','把委屈说出来，比憋着报复好','别让恨意替你做决定'] },
+  { n:'岳飞', d:'南宋', g:'m', c:'general', o:[0,0,-28,0,-12], t:'三十功名尘与土。', k:['忠勇','自律','直'],
+    f:'岳家军有"冻死不拆屋，饿死不掳掠"的军纪。', a:['认准的事做到极致','刚直之外，留一点回旋','身体也是要守的城池'] },
+  { n:'韩信', d:'西汉', g:'m', c:'general', o:[0,-32,0,32,0], t:'能忍胯下之辱，也能统百万之军。', k:['能忍','大才','要舞台'],
+    f:'年轻时受胯下之辱，后来成为一代兵仙。', a:['忍是为了做事，不是为了记恨','主动争取更大的舞台','看清谁是真的欣赏你'] },
+  { n:'霍去病', d:'西汉', g:'m', c:'general', o:[0,0,0,28,-12], t:'匈奴未灭，何以家为。', k:['锐气','极快','不留恋'],
+    f:'十七岁出征，二十一岁封狼居胥。', a:['趁锐气正盛，把大事做完','冲得快，也别忘了回头看看队友','别把年轻当成本钱挥霍'] },
+  { n:'花木兰', d:'北魏', g:'f', c:'general', o:[0,0,28,28,0], t:'家里需要人，我就去。', k:['担当','能扛','不声张'],
+    f:'《木兰辞》里写"同行十二年，不知木兰是女郎"。', a:['担当不必张扬，但要让家人知道你的辛苦','别总一个人扛，该求助的时候就开口','照顾好自己，才能长期扛事'] },
+  { n:'秦良玉', d:'明', g:'f', c:'general', o:[8,5,0,0,0], t:'我守的是城，也是我的人。', k:['忠勇','治军严','护民'],
+    f:'明代唯一凭军功封侯的女将，率白杆兵守城。', a:['把标准立起来，团队才带得动','冲锋之前，先想好退路','功劳分出去，人心才聚得住'] },
+  { n:'梁红玉', d:'南宋', g:'f', c:'general', o:[-30,0,0,0,30], t:'桴鼓亲临，我与将士同在。', k:['胆识','同甘共苦','有谋'],
+    f:'黄天荡之战中，她亲自击鼓助战。', a:['在场，比指挥更有力量','胆识要用在关键处','和人并肩，你会走得更远'] },
+  { n:'诸葛亮', d:'三国', g:'m', c:'strategist', o:[12,30,0,0,0], t:'鞠躬尽瘁，死而后已。', k:['尽心','周全','操心'],
+    f:'《出师表》里写"亲贤臣，远小人"。', a:['别把所有事都揽下','培养接班人，比亲力亲为更重要','计划再周全，也要留弹性'] },
+  { n:'张良', d:'西汉', g:'m', c:'strategist', o:[0,0,10,28,0], t:'运筹帷幄，赢在不动声色。', k:['低调','看局准','知进退'],
+    f:'功成之后选择退隐，得以善终。', a:['赢在判断，不必赢在场面','功成身退也是一种智慧','把判断力用在自己的生活上'] },
+  { n:'萧何', d:'西汉', g:'m', c:'strategist', o:[-23,0,0,0,23], t:'后方稳，前线才敢走远。', k:['务实','稳','不争功'],
+    f:'刘邦在前线作战，他在后方不断输送粮草兵源。', a:['做支撑的事，也要让人看见','稳是本事，别嫌它不耀眼','把功劳记录清楚，也要适时让人知道'] },
+  { n:'上官婉儿', d:'唐', g:'f', c:'strategist', o:[0,0,0,28,-28], t:'笔在我手里，事就成了。', k:['才情','懂分寸','位高'],
+    f:'主持修文馆，被称为"巾帼宰相"。', a:['用专业能力换取位置','在权力中心，分寸比才华更重要','给自己留一条退路'] },
+  { n:'萧太后', d:'辽', g:'f', c:'strategist', o:[0,-30,0,30,0], t:'我掌国，也亲征。', k:['果决','能文能武','守国'],
+    f:'亲率大军南下，签订澶渊之盟，换来百年和平。', a:['能谈判的时候，不必硬打','把局面稳定放在首位','强势之外，要有分寸'] },
+  { n:'沈括', d:'北宋', g:'m', c:'craftsman', o:[0,0,-28,0,-28], t:'我什么都想知道。', k:['博学','实证','爱记录'],
+    f:'《梦溪笔谈》里记下了活字印刷、指南针与地磁偏角。', a:['把好奇心变成记录','广博之外，选一门深挖','别只研究，也要交付结果'] },
+  { n:'毕昇', d:'北宋', g:'m', c:'craftsman', o:[0,-32,0,32,0], t:'有更省的办法，为什么不用。', k:['巧思','务实','低调'],
+    f:'发明胶泥活字印刷，比欧洲早约四百年。', a:['找到更省力的方法，就是价值','把改进讲清楚，别闷着','让工具替你重复劳动'] },
+  { n:'范蠡', d:'春秋', g:'m', c:'craftsman', o:[20,30,0,0,0], t:'功成之后，我去做生意。', k:['能算计','懂抽身','有分寸'],
+    f:'助越灭吴后泛舟而去，三聚三散家财。', a:['赚得到，也要守得住','看懂周期，才能在顶峰离场','把资源用在自己人身上'] },
+  { n:'黄道婆', d:'元', g:'f', c:'craftsman', o:[-32,0,0,0,5], t:'手艺改一点，人人穿得暖一点。', k:['巧手','肯教人','务实'],
+    f:'改良纺车与织造技术，被后世尊为纺织业祖师。', a:['把经验整理成可复制的方法','教会别人，影响力才放大','手艺要变现，也要传下去'] },
+  { n:'巴清', d:'秦', g:'f', c:'craftsman', o:[0,0,28,28,0], t:'我管着一座丹砂矿。', k:['经营','有格局','靠谱'],
+    f:'秦代女企业家，因捐资修长城被秦始皇以礼相待。', a:['资源就是话语权，先积累再出声','把生意做稳，比做大更难','别怕出头，但要留底牌'] },
+  { n:'陶渊明', d:'东晋', g:'m', c:'hermit', o:[0,0,-28,0,-8], t:'不为五斗米折腰。', k:['清高','自足','爱自然'],
+    f:'辞去彭泽县令，归田隐居，写下《归去来兮辞》。', a:['守住底线，但别把退路全断','清贫是选择，要有准备','把喜欢的生活过出内容，而不只是逃离'] },
+  { n:'林逋', d:'北宋', g:'m', c:'hermit', o:[0,-32,0,32,0], t:'梅妻鹤子，我不需要更多。', k:['极简','自洽','有情趣'],
+    f:'隐居西湖孤山二十年，以梅为妻、以鹤为子。', a:['独处不等于封闭，留一两个能说话的人','找到能长期陪你的事','别把清高变成拒绝善意的墙'] },
+  { n:'谢道韫', d:'东晋', g:'f', c:'hermit', o:[-8,0,0,0,30], t:'未若柳絮因风起。', k:['才气','从容','有风骨'],
+    f:'一句咏雪名句流传千年；晚年遇乱，仍持刀护家。', a:['才华要说出来，才有人记得','从容是底气，也要保护自己','经历变故后，允许自己慢慢恢复'] },
+  { n:'薛涛', d:'唐', g:'f', c:'hermit', o:[0,0,0,28,-8], t:'我在浣花溪边，写我的诗。', k:['才华','自尊','半隐'],
+    f:'创制深红色小幅诗笺"薛涛笺"，与元稹等人唱和。', a:['把才华做成作品，而不是姿态','退隐也要有自己的事业','别让过去的身份，定义现在的你'] },
+  { n:'阮籍', d:'三国', g:'m', c:'proud', o:[32,32,0,0,0], t:'我不说话，但你知道我什么意思。', k:['孤高','回避','才气'],
+    f:'以"青白眼"待人，驾车行至穷途便痛哭而返。', a:['沉默保护了你，也隔绝了你','找一个能直说的人','别把不屑当成骄傲'] },
+  { n:'郑板桥', d:'清', g:'m', c:'proud', o:[0,0,28,25,0], t:'聪明难，糊涂更难。', k:['傲骨','清醒','有分寸'],
+    f:'"扬州八怪"之一，画竹题字自成一格。', a:['看得清，也要学会装糊涂','原则留给自己，姿态留给别人','把才能变成作品，别只留在心里'] },
+  { n:'班昭', d:'东汉', g:'f', c:'proud', o:[0,-25,0,25,0], t:'我把书写完，也把课讲完。', k:['学问','坚持','有担当'],
+    f:'续写完成《汉书》，并给皇后与贵人授课。', a:['把专长做到不可替代','教别人是最快的成长','别让规矩困住你对世界的判断'] },
+  { n:'苏蕙', d:'前秦', g:'f', c:'proud', o:[0,0,0,25,-12], t:'我把心事织成回文。', k:['深情','巧思','执拗'],
+    f:'织成《璇玑图》，八百余字往返诵读皆能成诗。', a:['把情绪变成作品，比变成怨气好','深情要留给值得的人','别用复杂的方式表达简单的需求'] },
+  { n:'荆轲', d:'战国', g:'m', c:'knight', o:[0,0,5,28,0], t:'风萧萧兮易水寒。', k:['侠义','决绝','重诺'],
+    f:'受燕太子丹之托刺秦王，事败身死。', a:['重诺之前，先判断值不值得','勇气要配上策略，才不算白付','别把全部押在一次行动上'] },
+  { n:'豫让', d:'战国', g:'m', c:'knight', o:[-32,0,0,0,32], t:'他懂我，所以我愿意为他拼命。', k:['忠义','执着','认人'],
+    f:'为替智伯报仇，漆身吞炭改变形貌，两次行刺赵襄子。', a:['认人，比认事更需要判断','忠诚要给对的人，别只感动自己','不甘心的时候，先确认方向'] },
+  { n:'专诸', d:'春秋', g:'m', c:'knight', o:[30,5,0,0,0], t:'鱼肠藏刃，一击即中。', k:['隐忍','胆大','精准'],
+    f:'把短剑藏进鱼腹，成功刺杀吴王僚。', a:['等待时机，比贸然出手有效','一次机会，要准备到极致','事后要给自己留退路'] },
+  { n:'聂隐娘', d:'唐', g:'f', c:'knight', o:[0,-32,0,32,0], t:'我能来，也能走。', k:['独立','果决','有底线'],
+    f:'唐代传奇中的女侠，来去自如，自有权衡。', a:['独立是本事，也别拒绝依靠','做判断前，先弄清是非','留一个能回去的地方'] },
+  { n:'红线女', d:'唐', g:'f', c:'knight', o:[0,0,-28,0,-10], t:'一夜之间，止住一场仗。', k:['身手好','善解纷争','不居功'],
+    f:'唐代传奇中夜入敌营取走金盒，化解了一场战事。', a:['解决关键问题，比硬拼有效','不居功，但要让关键的人知道','做到之后，及时退场'] },
+  { n:'李时珍', d:'明', g:'m', c:'healer', o:[0,-25,0,34,0], t:'我走遍山野，只为把药写准。', k:['严谨','坚持','利他'],
+    f:'历时二十七年，写成《本草纲目》。', a:['把长期主义用在专业上','纠正错误，比重复权威更有价值','身体是长期项目的本钱'] },
+  { n:'华佗', d:'东汉', g:'m', c:'healer', o:[32,32,0,0,0], t:'治未病，比治已病重要。', k:['仁心','创新','身体力行'],
+    f:'创编"五禽戏"，主张用运动养生。', a:['预防永远比补救便宜','把方法教给别人，影响力才长久','专业之外，也要配一点人情味'] },
+  { n:'孙思邈', d:'唐', g:'m', c:'healer', o:[0,0,5,23,0], t:'人命至重，有贵千金。', k:['仁厚','博学','长寿'],
+    f:'著《千金方》，被后世尊为"药王"。', a:['把"帮到人"当成标准','持续学习，专业才不会过时','善待他人，也善待自己'] },
+  { n:'谈允贤', d:'明', g:'f', c:'healer', o:[0,0,0,28,-28], t:'我把治过的病，一条条记下来。', k:['细致','实践','敢出头'],
+    f:'著《女医杂言》，是中国古代少有的女医专著。', a:['把经验写下来，就是资产','打破常规时，先把本事练扎实','专业会替你说话，先把它做到扎实'] },
+  { n:'义妁', d:'西汉', g:'f', c:'healer', o:[-30,0,0,0,8], t:'我是女医，也进得了宫。', k:['医术好','胆识','被认可'],
+    f:'中国历史上有记载的第一位女医生。', a:['做第一个，就别怕被议论','把口碑当资产经营','照顾好自己，才能长期行医'] },
+  { n:'鲍姑', d:'东晋', g:'f', c:'healer', o:[0,0,-28,0,-28], t:'我用艾灸治好了很多人。', k:['专精','低调','实用'],
+    f:'葛洪之妻，以艾灸治赘瘤闻名，被称"鲍仙姑"。', a:['一门手艺做到极致','和优秀的人一起做事，成长更快','实用而不张扬，也是一种力量'] },
+  { n:'周公旦', d:'西周', g:'m', c:'virtue', o:[34,34,0,0,0], t:'我一沐三握发，为的是留住人才。', k:['谦和','担当','定规矩'],
+    f:'制礼作乐，奠定周代制度；"周公吐哺，天下归心"。', a:['礼数周到，是低成本的高情商','把制度立起来，比靠人更久','付出也要让人知道'] },
+  { n:'狄仁杰', d:'唐', g:'m', c:'virtue', o:[0,0,8,28,0], t:'我办事讲理，也讲分寸。', k:['圆融','正直','有手腕'],
+    f:'举荐张柬之等人，为唐朝延续了国运。', a:['原则放在心里，说话留余地','培养人是最高级的贡献','在复杂环境里，别急着站队'] },
+  { n:'长孙皇后', d:'唐', g:'f', c:'virtue', o:[0,0,-28,0,-28], t:'我劝得住他，也护得住人。', k:['温和','有智慧','能托底'],
+    f:'常劝李世民纳谏，并保护直言的大臣。', a:['温和是最有效的说服方式','在关键处帮人，胜过日常讨好','别把自己活成影子'] },
+  { n:'马皇后', d:'明', g:'f', c:'virtue', o:[0,0,0,28,-28], t:'我不铺张，但我保人。', k:['节俭','慈悲','有威望'],
+    f:'朱元璋之妻，多次劝谏救下大臣；她去世后，朱元璋不再立后。', a:['节俭是原则，也是影响力','救人一命，胜过争一次输赢','温柔也要有牙齿，该拦的时候要拦'] },
+  { n:'孟母', d:'战国', g:'f', c:'virtue', o:[-10,0,0,0,2], t:'我搬三次家，只为孩子。', k:['用心','坚持','有远见'],
+    f:'"孟母三迁""断机教子"的故事流传千年。', a:['环境影响人，先调整环境','长期投入比一时用力有效','别把牺牲变成给别人的压力'] },
+  { n:'王昭君', d:'西汉', g:'f', c:'virtue', o:[0,-30,0,30,0], t:'我出塞，边关几十年无战事。', k:['担当','沉静','有格局'],
+    f:'自愿出塞和亲，换来汉匈之间六十余年和平。', a:['大格局的选择，需要内心更强','在陌生环境里建立自己的位置','被误解时，用结果回答'] },
+  { n:'苏轼', d:'北宋', g:'m', c:'literati', o:[0,-25,0,12,0], t:'一蓑烟雨任平生。', k:['旷达','多才','会生活'],
+    f:'三次被贬，却在黄州写下《赤壁赋》。', a:['失意时写下来，别憋着','给自己培养一个能长期玩下去的兴趣','不把挫折当成人格'] },
+  { n:'唐伯虎', d:'明', g:'m', c:'literati', o:[0,0,-33,0,-33], t:'我卖画为生，也自得其乐。', k:['才气','洒脱','自嘲'],
+    f:'科举受挫后以卖画为生，写下《桃花庵歌》。', a:['才华要能变现，才能自由','学会自嘲，减轻外界压力','不顺利时，先安顿好生活'] },
+  { n:'李清照', d:'宋', g:'f', c:'literati', o:[0,0,28,12,0], t:'生当作人杰，死亦为鬼雄。', k:['才情极高','真性情','刚柔并存'],
+    f:'词名冠绝两宋，晚年仍坚持整理《金石录》。', a:['把感受写下来，是最好的整理','允许自己脆弱，但不放弃标准','感情之外，留住自己的事业'] },
+  { n:'卓文君', d:'西汉', g:'f', c:'literati', o:[-32,0,0,0,5], t:'我当垆卖酒，也不后悔。', k:['敢爱','有骨气','会算账'],
+    f:'与司马相如夜奔，后来写下《白头吟》。', a:['敢选择，也要有独立的能力','爱里保留一句"我有底线"','才华和生活都要抓在手里'] },
+  { n:'朱淑真', d:'宋', g:'f', c:'literati', o:[30,30,0,0,0], t:'我把不开心都写进了词里。', k:['敏感','真诚','有才华'],
+    f:'与李清照并称宋代女词人，词中多写真实心事。', a:['敏感要写成作品，而不是情绪','找一个懂你的人说真话','别用"应该"框住自己'] },
+  { n:'李白', d:'唐', g:'m', c:'roamer', o:[0,0,-24,0,-24], t:'仰天大笑出门去。', k:['豪放','浪漫','不拘'],
+    f:'"天子呼来不上船"，一生漫游名山大川。', a:['才华要收得住，才走得远','浪漫之外，留一份责任','把灵感变成作品，别只停在爽感'] },
+  { n:'柳永', d:'北宋', g:'m', c:'roamer', o:[0,0,0,2,-38], t:'凡有井水处，皆能歌柳词。', k:['深情','细腻','不羁'],
+    f:'一生流连市井，词作传唱极广。', a:['真心的表达会被记住','长期没有落点，才华会散','为热爱找一条可持续的路'] },
+  { n:'鱼玄机', d:'唐', g:'f', c:'roamer', o:[0,-10,0,2,0], t:'我写我的诗，也承担我的选择。', k:['才情','敢爱敢恨','锋芒'],
+    f:'唐代女诗人，诗句直白大胆，自成风格。', a:['锋芒要用作品承接','感情之外，别断了自己的退路','才华需要长期积累'] },
+  { n:'杨玉环', d:'唐', g:'f', c:'roamer', o:[-20,0,0,0,30], t:'我只有这一身技艺。', k:['绝艺','被偏爱','命运不由己'],
+    f:'善歌舞、通音律，是《霓裳羽衣曲》的舞者。', a:['技艺才是真正属于你的东西','被偏爱的时候，更要清醒','为自己留一条能独立走的路'] },
+  { n:'王羲之', d:'东晋', g:'m', c:'artist', o:[0,0,0,5,-28], t:'我把字写到极致。', k:['专精','自律','风雅'],
+    f:'《兰亭集序》被誉为"天下第一行书"。', a:['一门技艺练到极致，就是护城河','练习要有记录，才能进步','把审美变成生活方式'] },
+  { n:'嵇康', d:'三国', g:'m', c:'artist', o:[0,-30,0,5,0], t:'我弹我的琴，不陪你演戏。', k:['才艺','清高','刚直'],
+    f:'临刑前从容弹奏《广陵散》，叹"于今绝矣"。', a:['才华要配上能保护它的分寸','坚持原则，也别把桥都烧掉','把作品留下来，比争论更有力'] },
+  { n:'管道昇', d:'元', g:'f', c:'artist', o:[0,0,28,5,0], t:'我画竹，也写我的字。', k:['才艺','独立','有主张'],
+    f:'与赵孟頫并称书画双绝，曾写词劝阻丈夫纳妾。', a:['有自己的事业，关系才有底气','把主张说清楚，不必吵闹','持续创作，比一次惊艳更重要'] },
+  { n:'公孙大娘', d:'唐', g:'f', c:'artist', o:[30,32,0,0,0], t:'我的剑器舞，能让草圣明白怎么写。', k:['绝技','感染力强','专业'],
+    f:'剑器舞名动天下，杜甫写诗追忆，张旭观后草书大进。', a:['专业到极致，会跨领域影响人','把技艺展示出去，别只在私下练','被人看见，也是一种责任'] },
+  { n:'蔡文姬', d:'东汉', g:'f', c:'artist', o:[-32,0,0,0,32], t:'我把父亲的书，一句句背下来。', k:['博学','坚韧','深情'],
+    f:'从匈奴归汉后，凭记忆整理出父亲蔡邕散佚的书籍。', a:['把知识存进自己脑子里','经历苦难后，允许自己重建','才华要用在留存上'] }
+];
+
+/* =========================================================
+   4. 20 道情境题（每维 4 题，正反各半）
+   ========================================================= */
+var QUESTIONS = [
+  { id:1,  dim:'ambition', dir:-1, scene:'公司有个升职机会，要背更重的指标。', text:'我更想留在现在的岗位上，把日子过稳一点。' },
+  { id:2,  dim:'decision', dir:-1, scene:'要不要换城市工作，家人和朋友意见不一。', text:'我会反复权衡、多问几个人，再做决定。' },
+  { id:3,  dim:'loyalty',  dir:-1, scene:'老朋友开口借钱，数目对你来说不小。', text:'我会先考虑自己的计划，感情和钱要分开。' },
+  { id:4,  dim:'express',  dir:-1, scene:'开会时你发现方案有个明显问题。', text:'我多半不会当场提出来，会后再说更稳妥。' },
+  { id:5,  dim:'social',   dir:-1, scene:'一场你不太想去的饭局，都是不太熟的人。', text:'我通常会找理由推掉，一个人待着更舒服。' },
+  { id:6,  dim:'ambition', dir:-1, scene:'有个项目很能出成绩，但会占掉你所有周末。', text:'我宁愿不要这份成绩，也要保住自己的时间。' },
+  { id:7,  dim:'decision', dir:+1, scene:'团队僵持不下，需要一个拍板的人。', text:'我通常会站出来把方案定下来。' },
+  { id:8,  dim:'express',  dir:+1, scene:'你做出了一件自己很满意的作品。', text:'我会主动分享出去，希望有人看见和认可。' },
+  { id:9,  dim:'loyalty',  dir:+1, scene:'在乎的人遇到麻烦，需要你让出一部分利益。', text:'我会先帮，代价以后再算。' },
+  { id:10, dim:'social',   dir:+1, scene:'合作方很难缠，但事情还得推进。', text:'我能把场面处理得体，不认同也能把事办成。' },
+  { id:11, dim:'ambition', dir:+1, scene:'有机会代表团队上台汇报。', text:'我会争取这个机会，让人记住我的名字。' },
+  { id:12, dim:'decision', dir:+1, scene:'信息只掌握了一半，但机会窗口在关闭。', text:'我会先动手，边做边调整。' },
+  { id:13, dim:'loyalty',  dir:+1, scene:'你答应过一件小事，履行起来很麻烦。', text:'再麻烦我也会做到，答应过就是答应过。' },
+  { id:14, dim:'express',  dir:-1, scene:'你有一项别人不知道的本事。', text:'我觉得不必让人知道，自己心里清楚就行。' },
+  { id:15, dim:'social',   dir:-1, scene:'同事总爱在工作群里闲聊。', text:'我基本不参与，合不来的人懒得应付。' },
+  { id:16, dim:'ambition', dir:+1, scene:'公司要派人去开拓一个全新市场。', text:'这种从零开始的事，我很想试一试。' },
+  { id:17, dim:'decision', dir:-1, scene:'两件都不错的事同时找上你，只能选一件。', text:'我会拖一阵子，总觉得还没想清楚。' },
+  { id:18, dim:'express',  dir:+1, scene:'朋友的方案有问题，但他很热情。', text:'我会直接说出我的看法，哪怕有点扫兴。' },
+  { id:19, dim:'loyalty',  dir:-1, scene:'伴侣希望你为 TA 调整长期计划。', text:'我很难为感情改动自己的安排。' },
+  { id:20, dim:'social',   dir:+1, scene:'需要在陌生人面前介绍自己。', text:'我还挺擅长和不同类型的人打交道。' }
+];
+
+var OPTIONS = [
+  { v:5, label:'非常像我' }, { v:4, label:'比较像我' }, { v:3, label:'一半一半' },
+  { v:2, label:'不太像我' }, { v:1, label:'很不像我' }
+];
+
+/* =========================================================
+   5. 原创动画插画（12 族群）
+   ========================================================= */
+var FIG = {
+  emperor:   { bg:["#FFE7ED","#D98BA6","#AE4C6E"], robe:["#C93A5E","#8A1E3B"], trim:"#E7B25A", hair:"#2C1A21", skin:"#FFE8DA", orn:"crown",  acc:"seal"  },
+  general:   { bg:["#FFE9E2","#DE9488","#B25648"], robe:["#C2453C","#84251F"], trim:"#E7B25A", hair:"#291B19", skin:"#FFE7D6", orn:"helmet", acc:"sword" },
+  strategist:{ bg:["#FFE9EF","#D69AAB","#A65C74"], robe:["#A63A5C","#74213E"], trim:"#D9A85C", hair:"#291A21", skin:"#FFE9DE", orn:"guan",   acc:"fan"   },
+  craftsman: { bg:["#FFF0E4","#DBAE86","#AA7550"], robe:["#B87A50","#84512C"], trim:"#E0B070", hair:"#32241B", skin:"#FFEAD8", orn:"jin",    acc:"abacus"},
+  hermit:    { bg:["#F3EDF0","#BFA9B3","#8A727E"], robe:["#8E7A88","#61505C"], trim:"#CBB79A", hair:"#2A222A", skin:"#FFEADE", orn:"hat",    acc:"bamboo"},
+  proud:     { bg:["#F4EAF6","#C3A3CE","#8B6A99"], robe:["#7E5A93","#553764"], trim:"#D6B26A", hair:"#271D2B", skin:"#FFEAE3", orn:"jade",   acc:"brush" },
+  knight:    { bg:["#FFEAEA","#D99292","#A75757"], robe:["#A6393F","#6E2025"], trim:"#D9A85C", hair:"#291A1D", skin:"#FFE8DA", orn:"ribbon", acc:"sword" },
+  healer:    { bg:["#FFF1E9","#DDB395","#AB7B5C"], robe:["#B08258","#7A5533"], trim:"#D9C07A", hair:"#30241C", skin:"#FFECDC", orn:"jin",    acc:"gourd" },
+  virtue:    { bg:["#FFF2F5","#E3B6C2","#B27C8D"], robe:["#B9788C","#844E60"], trim:"#E0BE86", hair:"#2D2027", skin:"#FFECE4", orn:"tiara",  acc:"seal"  },
+  literati:  { bg:["#FFEEF3","#D9A2B6","#A76B83"], robe:["#B0526F","#7A304B"], trim:"#D9B273", hair:"#2B1D25", skin:"#FFEBE1", orn:"scholar",acc:"book"  },
+  roamer:    { bg:["#FCEBF2","#CF9BB4","#986480"], robe:["#8E4A6B","#5F2B46"], trim:"#D9A85C", hair:"#291A23", skin:"#FFEADE", orn:"ribbon", acc:"cup"   },
+  artist:    { bg:["#F8EBF4","#C9A2CB","#92709B"], robe:["#8C5490","#5C3661"], trim:"#D6B26A", hair:"#2A1D29", skin:"#FFEAE3", orn:"hairpin",acc:"brush" }
+};
+/* 头饰：按族群 + 性别 */
+function ORN(kind, c, g){
+  var T = c.trim, H = c.hair, W = "#FFF6F8";
+  if (g === "f"){
+    var hairOrn = {
+      crown:   '<path d="M42 30l4-11 6 6 8-9 8 9 6-6 4 11z" fill="' + T + '" stroke="rgba(120,70,30,.4)" stroke-width="1"/>' +
+               '<circle cx="60" cy="20" r="2.6" fill="#FFF3C9"/>' +
+               '<path d="M48 34c4 3 20 3 24 0" stroke="rgba(120,70,30,.35)" stroke-width="1.2" fill="none"/>',
+      helmet:  '<path d="M40 40c0-14 9-23 20-23s20 9 20 23z" fill="' + T + '" opacity=".95"/>' +
+               '<path d="M60 12c-3 4-3 8 0 11 3-3 3-7 0-11z" fill="#C9455F"/>' +
+               '<circle cx="60" cy="27" r="3" fill="#FFF3C9"/>',
+      guan:    '<path d="M43 30c3-8 9-12 17-12s14 4 17 12z" fill="' + T + '"/>' +
+               '<path d="M52 18l8-7 8 7z" fill="' + T + '" opacity=".85"/>' +
+               '<circle cx="60" cy="20" r="2.2" fill="#FFF3C9"/>',
+      jin:     '<path d="M42 32c2-9 9-14 18-14s16 5 18 14z" fill="' + T + '" opacity=".92"/>' +
+               '<path d="M42 32c6-4 30-4 36 0" stroke="rgba(255,255,255,.5)" stroke-width="1.2" fill="none"/>',
+      hat:     '<ellipse cx="60" cy="30" rx="30" ry="7" fill="' + T + '" opacity=".95"/>' +
+               '<path d="M60 12c6 6 8 12 8 18H52c0-6 2-12 8-18z" fill="' + T + '"/>',
+      jade:    '<path d="M45 26h30l-3 8H48z" fill="' + T + '"/>' +
+               '<circle cx="60" cy="22" r="5" fill="none" stroke="' + T + '" stroke-width="2.4"/>' +
+               '<circle cx="60" cy="22" r="1.8" fill="#FFF3C9"/>',
+      ribbon:  '<path d="M40 34c4-11 11-16 20-16s16 5 20 16" stroke="' + T + '" stroke-width="3.2" fill="none" stroke-linecap="round"/>' +
+               '<path d="M78 30c7 4 11 9 12 15" stroke="' + T + '" stroke-width="2.6" fill="none" stroke-linecap="round"/>',
+      tiara:   '<g><path d="M46 28c4-9 10-13 14-13s10 4 14 13z" fill="' + T + '" opacity=".95"/>' +
+               '<circle cx="60" cy="15" r="2.8" fill="#FFF3C9"/><circle cx="51" cy="20" r="2" fill="#FFF3C9"/><circle cx="69" cy="20" r="2" fill="#FFF3C9"/></g>',
+      scholar: '<path d="M44 30c3-9 9-13 16-13s13 4 16 13z" fill="' + T + '"/>' +
+               '<path d="M46 24c8-3 20-3 28 0" stroke="rgba(255,255,255,.45)" stroke-width="1.2" fill="none"/>',
+      hairpin: '<path d="M44 30c3-9 9-13 16-13s13 4 16 13z" fill="' + T + '"/>' +
+               '<path d="M76 24l14-6" stroke="' + T + '" stroke-width="2.4" stroke-linecap="round"/>' +
+               '<circle cx="91" cy="17" r="3" fill="#FFF3C9"/>' +
+               '<circle cx="50" cy="19" r="2.2" fill="#FFF3C9"/>'
+    };
+    return (hairOrn[kind] || hairOrn.guan) +
+      '<path d="M40 52c-5 16-4 30 3 40" stroke="' + H + '" stroke-width="8" stroke-linecap="round" fill="none"/>' +
+      '<path d="M80 52c5 16 4 30-3 40" stroke="' + H + '" stroke-width="8" stroke-linecap="round" fill="none"/>' +
+      '<path d="M60 84c-2 8-2 16 0 24" stroke="' + H + '" stroke-width="6" stroke-linecap="round" opacity=".85" fill="none"/>' +
+      '<circle cx="60" cy="70" r="1.8" fill="' + T + '"/>' +
+      '<path d="M57 74l3 3 3-3" stroke="' + T + '" stroke-width="1.2" fill="none"/>';
+  }
+  var male = {
+    crown:   '<path d="M40 30h40l-3-10-6 5-11-8-11 8-6-5z" fill="' + T + '" stroke="rgba(120,70,30,.4)" stroke-width="1"/>' +
+             '<rect x="40" y="29" width="40" height="5" rx="2" fill="' + T + '" opacity=".9"/>' +
+             '<path d="M47 34v9M55 34v9M65 34v9M73 34v9" stroke="' + T + '" stroke-width="1.6" opacity=".8"/>',
+    helmet:  '<path d="M38 42c0-15 10-25 22-25s22 10 22 25z" fill="' + T + '"/>' +
+             '<path d="M60 10c-4 5-4 10 0 14 4-4 4-9 0-14z" fill="#B93A4E"/>' +
+             '<path d="M38 42c8-4 36-4 44 0" stroke="rgba(255,255,255,.4)" stroke-width="1.4" fill="none"/>' +
+             '<circle cx="60" cy="26" r="3.4" fill="#FFF3C9"/>',
+    guan:    '<path d="M44 30c3-8 9-12 16-12s13 4 16 12z" fill="' + T + '"/>' +
+             '<path d="M54 18h12v-5H54z" fill="' + T + '" opacity=".85"/>' +
+             '<path d="M44 30h32" stroke="rgba(255,255,255,.35)" stroke-width="1.2"/>',
+    jin:     '<path d="M42 32c2-9 9-14 18-14s16 5 18 14z" fill="' + T + '" opacity=".95"/>' +
+             '<path d="M76 26c6 2 9 6 10 11-4 0-7-2-9-5z" fill="' + T + '" opacity=".8"/>',
+    hat:     '<ellipse cx="60" cy="31" rx="31" ry="7" fill="' + T + '" opacity=".95"/>' +
+             '<path d="M60 13c6 6 8 12 8 18H52c0-6 2-12 8-18z" fill="' + T + '"/>' +
+             '<path d="M52 31c5 3 11 3 16 0" stroke="rgba(255,255,255,.4)" stroke-width="1.2" fill="none"/>',
+    jade:    '<path d="M45 27h30l-3 7H48z" fill="' + T + '"/>' +
+             '<circle cx="60" cy="22" r="5" fill="none" stroke="' + T + '" stroke-width="2.4"/>',
+    ribbon:  '<path d="M40 34c4-11 11-16 20-16s16 5 20 16" stroke="' + T + '" stroke-width="3.4" fill="none" stroke-linecap="round"/>' +
+             '<path d="M40 34c-6 6-9 12-10 19" stroke="' + T + '" stroke-width="2.6" fill="none" stroke-linecap="round"/>',
+    tiara:   '<path d="M45 29h30l-3-8-6 4-6-6-6 6-6-4z" fill="' + T + '"/>',
+    scholar: '<path d="M42 31c2-10 9-15 18-15s16 5 18 15z" fill="' + T + '" opacity=".95"/>' +
+             '<path d="M52 16h16v-6H52z" fill="' + T + '" opacity=".8"/>',
+    hairpin: '<path d="M44 30c3-9 9-13 16-13s13 4 16 13z" fill="' + T + '"/>' +
+             '<path d="M74 22l12-5" stroke="' + T + '" stroke-width="2.2" stroke-linecap="round"/>'
+  };
+  return (male[kind] || male.guan) +
+    '<path d="M74 62c6 4 10 10 12 18" stroke="' + H + '" stroke-width="5" stroke-linecap="round" fill="none" opacity=".9"/>' +
+    (kind === "helmet" || kind === "crown"
+      ? '<path d="M52 76c3 2 13 2 16 0" stroke="' + H + '" stroke-width="2" fill="none" opacity=".5"/>'
+      : "");
+}
+/* 道具 */
+function ACC(kind, c, g){
+  var T = c.trim, R = c.robe[1], W = "#FFF8FA";
+  switch (kind){
+    case "book":   return '<g class="fig-acc"><rect x="30" y="96" width="30" height="26" rx="3" fill="' + W + '" stroke="' + R + '" stroke-width="1.8"/>' +
+                     '<path d="M45 96v26M34 102h8M34 108h8M48 102h8M48 108h8" stroke="' + R + '" stroke-width="1.3" stroke-linecap="round" opacity=".8"/>' +
+                     '<rect x="30" y="94" width="30" height="5" rx="2" fill="' + T + '"/></g>';
+    case "sword":  return '<g class="fig-acc"><path d="M86 78l10 42" stroke="#E4E9F2" stroke-width="5.4" stroke-linecap="round"/>' +
+                     '<path d="M84 76l14-4" stroke="' + T + '" stroke-width="4.4" stroke-linecap="round"/>' +
+                     '<path d="M96 120l10-3" stroke="' + R + '" stroke-width="6" stroke-linecap="round"/>' +
+                     '<path d="M99 126c3 3 1 7-3 7s-5-4-1-7z" fill="#C9455F"/></g>';
+    case "fan":    return '<g class="fig-acc"><path d="M28 98a30 30 0 0 1 30-30v30z" fill="' + W + '" stroke="' + R + '" stroke-width="1.8"/>' +
+                     '<path d="M28 98h30M34 88l10-16M44 92l6-20M54 92V70" stroke="' + R + '" stroke-width="1.1" opacity=".7"/>' +
+                     '<circle cx="58" cy="98" r="3" fill="' + T + '"/></g>';
+    case "abacus": return '<g class="fig-acc"><rect x="28" y="96" width="42" height="28" rx="3" fill="#FFF6EE" stroke="' + R + '" stroke-width="1.8"/>' +
+                     '<path d="M28 105h42M28 115h42" stroke="' + R + '" stroke-width="1.2" opacity=".8"/>' +
+                     '<circle cx="37" cy="100" r="2.6" fill="' + T + '"/><circle cx="47" cy="100" r="2.6" fill="' + T + '"/>' +
+                     '<circle cx="41" cy="110" r="2.6" fill="' + T + '"/><circle cx="57" cy="110" r="2.6" fill="' + T + '"/>' +
+                     '<circle cx="52" cy="120" r="2.6" fill="' + T + '"/></g>';
+    case "bamboo": return '<g class="fig-acc"><path d="M92 74v48" stroke="#8FB98A" stroke-width="4.4" stroke-linecap="round"/>' +
+                     '<path d="M92 86h10M92 98h-10M92 110h10" stroke="#8FB98A" stroke-width="2.4" stroke-linecap="round"/>' +
+                     '<path d="M102 86c7-5 12-3 12 4-7 2-11 0-12-4zM82 98c-7-5-12-3-12 4 7 2 11 0 12-4z" fill="#A8CCA0"/></g>';
+    case "brush":  return '<g class="fig-acc"><path d="M84 76l4 40" stroke="' + R + '" stroke-width="3.6" stroke-linecap="round"/>' +
+                     '<path d="M84 76l-2-11 8 4z" fill="#4A2E3C"/>' +
+                     '<path d="M88 116c4 5 2 9-2 9s-6-4-2-9z" fill="' + c.robe[0] + '"/>' +
+                     '<circle cx="86" cy="72" r="2" fill="' + T + '"/></g>';
+    case "gourd":  return '<g class="fig-acc"><path d="M86 96c-7 0-11 6-11 12s5 11 11 11 11-5 11-11-4-12-11-12z" fill="#F0C88A" stroke="' + R + '" stroke-width="1.6"/>' +
+                     '<path d="M86 96c-3-4-3-8 0-11 3 3 3 7 0 11z" fill="#F0C88A" stroke="' + R + '" stroke-width="1.6"/>' +
+                     '<path d="M81 106h10M86 92v-4" stroke="' + R + '" stroke-width="1.3" stroke-linecap="round"/>' +
+                     '<circle cx="86" cy="86" r="2" fill="' + T + '"/></g>';
+    case "seal":   return '<g class="fig-acc"><rect x="80" y="98" width="24" height="24" rx="4" fill="' + c.robe[0] + '" stroke="' + R + '" stroke-width="1.6"/>' +
+                     '<path d="M87 105h10M87 111h10M92 102v13" stroke="#FFF1F4" stroke-width="1.8" stroke-linecap="round"/>' +
+                     '<path d="M92 98v-5" stroke="' + T + '" stroke-width="2.2" stroke-linecap="round"/>' +
+                     '<circle cx="92" cy="91" r="2.4" fill="' + T + '"/></g>';
+    case "cup":    return '<g class="fig-acc"><path d="M78 96h20l-3 18H81z" fill="' + W + '" stroke="' + R + '" stroke-width="1.8"/>' +
+                     '<path d="M78 96h20" stroke="' + T + '" stroke-width="2.6" stroke-linecap="round"/>' +
+                     '<path d="M98 101c6 0 7 6 2 8" stroke="' + R + '" stroke-width="1.6" fill="none"/>' +
+                     '<path d="M84 104h10" stroke="' + R + '" stroke-width="1.2" opacity=".7"/></g>';
+    default:       return "";
+  }
+}
+function figureSVG(clanId, cls, g){
+  g = (g === "f") ? "f" : "m";
+  var c = FIG[clanId] || FIG.literati;
+  var uid = "fg_" + clanId + "_" + g + "_" + (++gidSeq);
+  var skin = c.skin, hair = c.hair, T = c.trim;
+  var eyeY = 58, eyeX = 8.4;
+  return '<svg class="' + (cls || "") + '" viewBox="0 0 120 146" role="img" aria-label="' + (CNAME[clanId] || "") + (g === "f" ? "女性" : "男性") + '人物插画" xmlns="http://www.w3.org/2000/svg">' +
+    '<defs>' +
+      '<radialGradient id="' + uid + 'b" cx="0.5" cy="0.4" r="0.62">' +
+        '<stop offset="0" stop-color="' + c.bg[0] + '"/><stop offset="0.55" stop-color="' + c.bg[1] + '"/><stop offset="1" stop-color="' + c.bg[2] + '"/></radialGradient>' +
+      '<linearGradient id="' + uid + 'r" x1="0" y1="0" x2="0.3" y2="1">' +
+        '<stop offset="0" stop-color="' + c.robe[0] + '"/><stop offset="1" stop-color="' + c.robe[1] + '"/></linearGradient>' +
+      '<linearGradient id="' + uid + 'h" x1="0.2" y1="0" x2="0.6" y2="1">' +
+        '<stop offset="0" stop-color="' + hair + '"/><stop offset="1" stop-color="rgba(0,0,0,.55)"/></linearGradient>' +
+      '<radialGradient id="' + uid + 'g" cx="0.5" cy="0.35" r="0.6">' +
+        '<stop offset="0" stop-color="#FFF6E0" stop-opacity="0.55"/><stop offset="1" stop-color="#FFF6E0" stop-opacity="0"/></radialGradient>' +
+    '</defs>' +
+    '<g class="fig-float">' +
+      '<circle cx="60" cy="70" r="56" fill="url(#' + uid + 'b)"/>' +
+      '<circle cx="60" cy="66" r="46" fill="url(#' + uid + 'g)"/>' +
+      '<circle class="fig-halo" cx="60" cy="70" r="50" fill="none" stroke="#FFFFFF" stroke-width="2" opacity="0.45"/>' +
+      '<circle cx="60" cy="70" r="53.4" fill="none" stroke="' + T + '" stroke-width="1.2" opacity="0.55" stroke-dasharray="3 6"/>' +
+      '<path d="M18 96c8-6 14-4 18 2-6 4-14 3-18-2z" fill="#FFFFFF" opacity="0.18"/>' +
+      '<path d="M102 44c-8-6-14-4-18 2 6 4 14 3 18-2z" fill="#FFFFFF" opacity="0.16"/>' +
+      /* 披风 */
+      (g === "m" && (clanId === "general" || clanId === "knight" || clanId === "emperor")
+        ? '<path class="fig-sway" d="M28 144c-6-26-2-42 10-50 4 16 6 33 6 50z" fill="' + c.robe[1] + '" opacity=".95"/>' +
+          '<path class="fig-sway2" d="M92 144c6-26 2-42-10-50-4 16-6 33-6 50z" fill="' + c.robe[1] + '" opacity=".95"/>'
+        : "") +
+      /* 袖 */
+      '<path class="fig-sway" d="M30 116c-8 3-13 10-14 17 9 1 16-5 19-12z" fill="' + c.robe[1] + '"/>' +
+      '<path class="fig-sway2" d="M90 116c8 3 13 10 14 17-9 1-16-5-19-12z" fill="' + c.robe[1] + '"/>' +
+      /* 袍身 */
+      '<path d="M30 146c0-22 6-38 16-45 4-3 9-4 14-4s10 1 14 4c10 7 16 23 16 45z" fill="url(#' + uid + 'r)"/>' +
+      /* 云肩 */
+      '<path d="M40 104c6 7 34 7 40 0 2 4 2 8 0 11-8 5-32 5-40 0-2-3-2-7 0-11z" fill="' + T + '" opacity=".22"/>' +
+      '<path d="M40 104c6 7 34 7 40 0" stroke="' + T + '" stroke-width="1.6" fill="none" opacity=".8"/>' +
+      /* 交领 */
+      '<path d="M50 100l10 17 10-17" fill="none" stroke="#FFF4F7" stroke-width="3.4" stroke-linejoin="round"/>' +
+      '<path d="M54 99l6 12 6-12" fill="none" stroke="' + T + '" stroke-width="1.4" stroke-linejoin="round" opacity=".85"/>' +
+      /* 腰带 */
+      '<rect x="44" y="124" width="32" height="7" rx="3.5" fill="' + T + '" opacity=".9"/>' +
+      '<circle cx="60" cy="127.5" r="2.6" fill="' + c.robe[1] + '"/>' +
+      /* 颈 */
+      '<rect x="55" y="80" width="10" height="12" rx="5" fill="' + skin + '" opacity=".95"/>' +
+      /* 头 */
+      '<ellipse cx="60" cy="60" rx="18.6" ry="20.4" fill="' + skin + '"/>' +
+      '<ellipse cx="52" cy="54" rx="7" ry="9" fill="#FFFFFF" opacity=".18"/>' +
+      /* 发 */
+      '<path d="M40 60c-1-15 8-25 20-25s21 10 20 25c0-7-4-13-8-15-6 4-18 5-26 2-4 3-6 8-6 13z" fill="url(#' + uid + 'h)"/>' +
+      '<path d="M41 58c-3 9-2 17 3 23" stroke="' + hair + '" stroke-width="5" stroke-linecap="round" fill="none"/>' +
+      '<path d="M79 58c3 9 2 17-3 23" stroke="' + hair + '" stroke-width="5" stroke-linecap="round" fill="none"/>' +
+      /* 眉 */
+      (g === "f"
+        ? '<path d="M49 52c3-2 7-2 9 0" stroke="#6B4152" stroke-width="1.5" fill="none" stroke-linecap="round"/>' +
+          '<path d="M62 52c2-2 6-2 9 0" stroke="#6B4152" stroke-width="1.5" fill="none" stroke-linecap="round"/>'
+        : '<path d="M47 51c4-3 9-3 12 1" stroke="#4A2E38" stroke-width="2" fill="none" stroke-linecap="round"/>' +
+          '<path d="M61 52c3-4 8-4 12-1" stroke="#4A2E38" stroke-width="2" fill="none" stroke-linecap="round"/>') +
+      /* 眼 */
+      '<ellipse cx="' + (60 - eyeX) + '" cy="' + eyeY + '" rx="2.9" ry="3.3" fill="#3E2733"/>' +
+      '<ellipse cx="' + (60 + eyeX) + '" cy="' + eyeY + '" rx="2.9" ry="3.3" fill="#3E2733"/>' +
+      '<circle cx="' + (60 - eyeX - 1) + '" cy="' + (eyeY - 1.2) + '" r="1" fill="#FFFFFF"/>' +
+      '<circle cx="' + (60 + eyeX - 1) + '" cy="' + (eyeY - 1.2) + '" r="1" fill="#FFFFFF"/>' +
+      '<circle cx="' + (60 + eyeX + 1) + '" cy="' + (eyeY + 1.2) + '" r="0.6" fill="#FFFFFF" opacity=".8"/>' +
+      (g === "f"
+        ? '<path d="M' + (60 - eyeX - 3.4) + ' ' + (eyeY - 2.5) + 'c2-1.6 5-1.6 6.8.6" stroke="#4A2E38" stroke-width="1.3" fill="none" stroke-linecap="round"/>' +
+          '<path d="M' + (60 + eyeX - 3.4) + ' ' + (eyeY - 1.9) + 'c1.8-2.2 4.8-2.2 6.8-.6" stroke="#4A2E38" stroke-width="1.3" fill="none" stroke-linecap="round"/>' +
+          '<ellipse cx="60" cy="48" rx="1.6" ry="2.2" fill="#C9455F" opacity=".85"/>' +
+          '<ellipse cx="60" cy="68" rx="2.4" ry="1.7" fill="#C9455F" opacity=".9"/>'
+        : '<ellipse cx="60" cy="69" rx="3" ry="1.1" fill="#8A4A54" opacity=".8"/>') +
+      /* 鼻 */
+      '<path d="M60 60v4" stroke="rgba(120,70,70,.35)" stroke-width="1.1" stroke-linecap="round"/>' +
+      /* 腮红 */
+      '<ellipse cx="47" cy="66" rx="4.2" ry="2.8" fill="#FF8FA8" opacity="' + (g === "f" ? "0.45" : "0.3") + '"/>' +
+      '<ellipse cx="73" cy="66" rx="4.2" ry="2.8" fill="#FF8FA8" opacity="' + (g === "f" ? "0.45" : "0.3") + '"/>' +
+      ORN(c.orn, c, g) +
+      ACC(c.acc, c, g) +
+      '<path class="fig-spark" d="M0-5L1.4-1.4 5 0 1.4 1.4 0 5-1.4 1.4-5 0-1.4-1.4Z" fill="#FFFFFF" opacity=".9" transform="translate(24,30)"/>' +
+      '<path class="fig-spark" style="animation-delay:1.3s" d="M0-4L1.1-1.1 4 0 1.1 1.1 0 4-1.1 1.1-4 0-1.1-1.1Z" fill="#FFFFFF" opacity=".8" transform="translate(97,46)"/>' +
+      '<path class="fig-spark" style="animation-delay:2.1s" d="M0-3.4L.9-.9 3.4 0 .9.9 0 3.4-.9.9-3.4 0-.9-.9Z" fill="#FFFFFF" opacity=".7" transform="translate(30,104)"/>' +
+    '</g>' +
+  '</svg>';
+}
+var gidSeq = 0;
+var CNAME = {};
+CLANS.forEach(function(c){ CNAME[c.id] = c.name; });
+
+/* =========================================================
+   6. 计分与两级匹配
+   ========================================================= */
+var DIM_INDEX = {};
+DIMS.forEach(function(d, i){ DIM_INDEX[d.key] = i; });
+var CLAN_BY_ID = {}, FIG_BY_CLAN = {};
+CLANS.forEach(function(c){ CLAN_BY_ID[c.id] = c; FIG_BY_CLAN[c.id] = []; });
+var SPREAD = 1;
+FIGURES.forEach(function(f){ f.v = f.o.map(function(x, i){ return Math.max(0, Math.min(100, Math.round(CLAN_BY_ID[f.c].v[i] + x * SPREAD))); }); FIG_BY_CLAN[f.c].push(f); });
+
+function dimOf(key){ for (var i = 0; i < DIMS.length; i++){ if (DIMS[i].key === key) return DIMS[i]; } return null; }
+function itemScore(q, answer){
+  if (typeof answer !== 'number') return null;
+  var v = (answer - 1) / 4 * 100;
+  return q.dir < 0 ? (100 - v) : v;
+}
+function dimScores(answers){
+  answers = answers || {};
+  return DIMS.map(function(d){
+    var items = QUESTIONS.filter(function(q){ return q.dim === d.key; });
+    var sum = 0, n = 0;
+    items.forEach(function(q){ var s = itemScore(q, answers[q.id]); if (s !== null){ sum += s; n++; } });
+    return Math.round((n ? sum / n : 50) * 10) / 10;
+  });
+}
+function dist(a, b){
+  var s = 0;
+  for (var i = 0; i < a.length; i++){ var df = a[i] - b[i]; s += df * df; }
+  return Math.sqrt(s / a.length);
+}
+function poolName(p){ return p === 'm' ? '男性人物' : (p === 'f' ? '女性人物' : '全部人物'); }
+
+function computeResult(answers, pool){
+  answers = answers || {};
+  pool = pool || 'all';
+  var vec = dimScores(answers);
+
+  /* 第一级：定位族群 */
+  var clans = CLANS.map(function(c){
+    var d = dist(vec, c.v);
+    return { id:c.id, name:c.name, clan:c, dist:d, fit:Math.max(40, Math.min(99, Math.round(100 - d))) };
+  }).sort(function(x, y){ return x.dist - y.dist; });
+
+  /* 人物匹配：在选定人物库里逐一比对，差距最小的一位就是你
+     并给"人物所属族群与你画像的贴合度"一个轻微加权，保证人物与族群解读一致 */
+  var poolFigs = FIGURES.filter(function(f){ return pool === 'all' || f.g === pool; });
+  var clanDistOf = {};
+  clans.forEach(function(c){ clanDistOf[c.id] = c.dist; });
+  var rankedFigs = poolFigs.map(function(f){
+    var d = dist(vec, f.v);
+    var cd = (clanDistOf[f.c] == null) ? d : clanDistOf[f.c];
+    return { fig:f, dist:d, clanDist:cd, score:d + 0.3 * cd, fit:Math.max(40, Math.min(99, Math.round(100 - d))) };
+  }).sort(function(x, y){ return (x.score - y.score) || (x.fig.n < y.fig.n ? -1 : 1); });
+  /* 二次精排：候选之间差异越大的维度，权重越高 */
+  var K = Math.min(8, rankedFigs.length);
+  var cand = rankedFigs.slice(0, K);
+  if (cand.length > 1){
+    var sd = DIMS.map(function(_, i){
+      var vals = cand.map(function(c){ return c.fig.v[i]; });
+      var m = vals.reduce(function(a, b){ return a + b; }, 0) / vals.length;
+      return Math.sqrt(vals.reduce(function(a, b){ return a + (b - m) * (b - m); }, 0) / vals.length);
+    });
+    var maxSd = Math.max.apply(null, sd) || 1;
+    var wt = sd.map(function(x){ return 1 + 1.8 * (x / maxSd); });
+    var wsum = wt.reduce(function(a, b){ return a + b; }, 0);
+    cand.forEach(function(c){
+      var s = 0;
+      for (var i = 0; i < DIMS.length; i++){ var df = vec[i] - c.fig.v[i]; s += wt[i] * df * df; }
+      c.rank2 = Math.sqrt(s / wsum) + 0.3 * c.clanDist;
+      c.fit2 = Math.max(40, Math.min(99, Math.round(100 - c.rank2)));
+    });
+    var best2 = cand.slice().sort(function(x, y){ return (x.rank2 - y.rank2) || (x.fig.n < y.fig.n ? -1 : 1); });
+    rankedFigs = best2.concat(rankedFigs.slice(K));
+    best2.forEach(function(c){ c.fit = c.fit2; });
+  }
+  var primary = rankedFigs[0], secondFig = rankedFigs[1];
+  var useClan = { id:primary.fig.c, name:CLAN_BY_ID[primary.fig.c].name, clan:CLAN_BY_ID[primary.fig.c],
+                  dist:dist(vec, CLAN_BY_ID[primary.fig.c].v),
+                  fit:Math.max(40, Math.min(99, Math.round(100 - dist(vec, CLAN_BY_ID[primary.fig.c].v)))) };
+
+  var dimRows = DIMS.map(function(d, i){
+    var s = vec[i];
+    var level = s >= 62 ? 'high' : (s <= 38 ? 'low' : 'mid');
+    var pole = level === 'high' ? d.high : (level === 'low' ? d.low : '居中');
+    return { key:d.key, name:d.name, brief:d.brief, score:s, level:level, pole:pole,
+             text:d.texts[level], lowName:d.low, highName:d.high };
+  });
+
+  var maxI = 0, minI = 0;
+  for (var i = 1; i < vec.length; i++){
+    if (vec[i] > vec[maxI]) maxI = i;
+    if (vec[i] < vec[minI]) minI = i;
+  }
+
+  /* 族群归属度：与第一名族群的接近度 vs 第二名 */
+  var clanGap = clans[1].dist - clans[0].dist;
+  var hybrid = clanGap <= 6;
+
+  var answered = 0, neutral = 0, vals = [];
+  QUESTIONS.forEach(function(q){
+    var a = answers[q.id];
+    if (typeof a === 'number'){ answered++; vals.push(a); if (a === 3) neutral++; }
+  });
+  var same = vals.length > 1 && vals.every(function(v){ return v === vals[0]; });
+  var notes = [];
+  if (neutral >= 10) notes.push('你有 ' + neutral + ' 题选择了"一半一半"。中间选项太多时，五个维度的分数会一起向中间收拢，人物会变得"谁都像一点"；如果愿意，找个安静的时间重测一次，凭第一感觉选。');
+  if (same) notes.push('20 题的选择完全一致。这种作答方式通常说明当时没有细看题目，画像会被拉平，建议重新作答。');
+
+  return {
+    vec: vec, dims: dimRows, clans: clans, clan: useClan.clan, clanFit: useClan.fit,
+    clanSecond: clans[1], hybrid: hybrid,
+    fig: primary.fig, figFit: primary.fit,
+    secondFig: secondFig ? secondFig.fig : null, secondFit: secondFig ? secondFig.fit : 0,
+    rankedFigs: rankedFigs,
+    sameClan: FIG_BY_CLAN[useClan.id].filter(function(f){ return f !== primary.fig && (pool === 'all' || f.g === pool); }),
+    topDim: { name:DIMS[maxI].name, score:vec[maxI] },
+    lowDim: { name:DIMS[minI].name, score:vec[minI] },
+    pool: pool, poolLabel: poolName(pool),
+    qualityNotes: notes, answered: answered
+  };
+}
+
+/* =========================================================
+   7. HTML 构建
+   ========================================================= */
+function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+
+function questionCardHTML(idx, answers, pool){
+  var q = QUESTIONS[idx];
+  if (!q) return '';
+  var d = dimOf(q.dim), cur = answers[q.id];
+  var opts = OPTIONS.map(function(o, i){
+    return '<button type="button" class="opt" role="radio" aria-checked="' + (cur === o.v ? 'true' : 'false') +
+      '" data-v="' + o.v + '"><span class="rd" aria-hidden="true"></span><span class="txt">' + o.label +
+      '</span><span class="key" aria-hidden="true">' + (i + 1) + '</span></button>';
+  }).join('');
+  return '<span class="qh-dim">' + esc(d.name) + '</span>' +
+    '<span class="qh-dim" style="background:#FFF1E6;color:#A9762F">' + esc(poolName(pool)) + '</span>' +
+    '<div class="q-scene"><b>情境 ' + (idx + 1) + '：</b>' + esc(q.scene) + '</div>' +
+    '<div class="q-text" id="q-question">' + esc(q.text) + '</div>' +
+    '<div class="q-hint">没有对错，选最接近你真实反应的那一项。</div>' +
+    '<div class="opts" role="radiogroup" aria-labelledby="q-question">' + opts + '</div>';
+}
+
+function radarHTML(vec){
+  var CX = 140, CY = 132, R = 72, N = DIMS.length;
+  var ang = DIMS.map(function(_, i){ return -Math.PI / 2 + i * 2 * Math.PI / N; });
+  function pt(i, v){ var r = R * v / 100; return [(CX + Math.cos(ang[i]) * r).toFixed(1), (CY + Math.sin(ang[i]) * r).toFixed(1)]; }
+  var rings = [25, 50, 75, 100].map(function(p){
+    var pts = ang.map(function(_, i){ return pt(i, p).join(','); }).join(' ');
+    return '<polygon points="' + pts + '" fill="' + (p === 100 ? '#FFF7FA' : 'none') + '" stroke="#F8DCE6" stroke-width="1"/>';
+  }).join('');
+  var spokes = ang.map(function(_, i){ var e = pt(i, 100); return '<line x1="' + CX + '" y1="' + CY + '" x2="' + e[0] + '" y2="' + e[1] + '" stroke="#F8DCE6" stroke-width="1"/>'; }).join('');
+  var poly = vec.map(function(v, i){ return pt(i, v).join(','); }).join(' ');
+  var dots = vec.map(function(v, i){ var p = pt(i, v); return '<circle cx="' + p[0] + '" cy="' + p[1] + '" r="4" fill="#fff" stroke="#E8506F" stroke-width="2.2"/>'; }).join('');
+  var labels = DIMS.map(function(d, i){
+    var a = ang[i], x = CX + Math.cos(a) * (R + 22), y = CY + Math.sin(a) * (R + 22) + 4;
+    var anchor = Math.abs(Math.cos(a)) < 0.3 ? 'middle' : (Math.cos(a) > 0 ? 'start' : 'end');
+    return '<text x="' + x.toFixed(1) + '" y="' + y.toFixed(1) + '" text-anchor="' + anchor +
+      '" font-size="12" font-weight="700" fill="#6E5A61">' + d.name + '</text>';
+  }).join('');
+  return '<svg class="radar" viewBox="0 0 280 268" role="img" aria-label="五维画像雷达图：' +
+    DIMS.map(function(d, i){ return d.name + ' ' + Math.round(vec[i]) + ' 分'; }).join('，') + '">' +
+    rings + spokes +
+    '<polygon points="' + poly + '" fill="rgba(232,80,111,.20)" stroke="#E8506F" stroke-width="2.2" stroke-linejoin="round"/>' +
+    dots + labels + '</svg>';
+}
+
+function resultBodyHTML(res){
+  var f = res.fig, c = res.clan;
+  var chips = f.k.map(function(k){ return '<span class="chip">' + esc(k) + '</span>'; }).join('');
+  var dimList = res.dims.map(function(d){
+    return '<div class="dim"><div class="dim-h"><b>' + esc(d.name) + '</b><span class="lv ' + d.level + '">' + esc(d.pole) + '</span></div>' +
+      '<div class="dim-bar"><i style="width:' + d.score + '%"></i></div>' +
+      '<div class="sc">' + d.score + ' / 100 · 越靠右越接近「' + esc(d.highName) + '」</div>' +
+      '<p>' + esc(d.text) + '</p></div>';
+  }).join('');
+  var advice = f.a.map(function(x){ return '<li>' + esc(x) + '</li>'; }).join('');
+  var rankRows = res.rankedFigs.slice(0, 3).map(function(r, i){
+    return '<div class="rk' + (i === 0 ? ' first' : '') + '"><div class="no">' + (i + 1) + '</div>' +
+      '<div><div class="nm">' + esc(r.fig.n) + '<span class="badge" style="background:#FFF3E6;color:#A9762F">' + esc(r.fig.d) + '</span>' +
+      (i === 0 ? '<span class="badge">最像你</span>' : '') + '</div>' +
+      '<div class="track"><i style="width:' + r.fit + '%"></i></div></div>' +
+      '<div class="pc">' + r.fit + '%</div></div>';
+  }).join('');
+  var sameClan = res.sameClan.map(function(x){
+    return '<div class="sc"><b>' + esc(x.n) + '</b><i>' + esc(x.d) + (x.g === 'f' ? ' · 女' : ' · 男') + '</i>' +
+      '<p>' + esc(x.t) + '</p></div>';
+  }).join('');
+  var ansList = QUESTIONS.map(function(q, i){
+    var v = res.answers[q.id], opt = null;
+    for (var k = 0; k < OPTIONS.length; k++){ if (OPTIONS[k].v === v) opt = OPTIONS[k]; }
+    var d = dimOf(q.dim);
+    return '<div class="ans"><div class="i">' + (i + 1) + '</div><div><div class="q">' + esc(q.scene) + '　→　' + esc(q.text) + '</div>' +
+      '<div class="a">' + (opt ? esc(opt.label) : '未作答') + '<span class="tag">' + esc(d.name) + (q.dir < 0 ? ' · 反向' : '') + '</span></div></div></div>';
+  }).join('');
+  var quality = res.qualityNotes.length ? '<div class="quality"><span class="qi">!</span><div>' + res.qualityNotes.map(esc).join('<br>') + '</div></div>' : '';
+
+  return '' +
+  '<div class="card res-hero"><div class="in">' +
+    '<span class="eyebrow">在' + esc(res.poolLabel) + '库里，你最像的是</span>' +
+    '<div style="margin-top:10px">' + figureSVG(f.c, 'res-fig', f.g) + '</div>' +
+    '<h2 class="res-name">' + esc(f.n) + '</h2>' +
+    '<div class="res-dyn">' + esc(f.d) + ' · ' + esc(c.name) + '</div>' +
+    '<div style="margin-top:10px"><span class="seal">' + esc(f.n.slice(-2)) + '之性情</span></div>' +
+    '<p class="res-tag">' + esc(f.t) + '</p>' +
+    '<div class="chips">' + chips + '</div>' +
+    '<div class="fit"><span class="num">' + res.figFit + '%</span><span class="lab">与 TA 的性情契合度<br>第二名 ' +
+      esc(res.secondFig ? res.secondFig.n : '—') + ' ' + res.secondFit + '%</span></div>' +
+    (res.hybrid
+      ? '<div class="hybrid"><b>族群并列提示：</b>你的五维画像同时贴近「' + esc(c.name) + '」和「' + esc(res.clanSecond.name) +
+        '」，两者差距很小。下面的解读以「' + esc(c.name) + '」为主，你也可以读一读另一族的气质。</div>'
+      : '') +
+    '<div class="res-actions">' +
+      '<button class="btn btn-primary" data-act="poster">保存结果图</button>' +
+      '<button class="btn btn-ghost" data-act="retest">重新测试</button>' +
+      '<button class="btn btn-ghost" data-act="pool">换人物库</button>' +
+      '<button class="btn btn-ghost" data-act="edit">修改答案</button>' +
+    '</div>' +
+  '</div></div>' +
+
+  '<div class="card">' +
+    '<div class="sec-title"><i class="bar"></i>' + esc(f.n) + ' · 性情画像</div>' +
+    '<p style="font-size:14.5px;color:var(--ink2);line-height:1.8">' + esc(f.d) + '人，' + esc(c.tag) +
+      ' TA 属于「' + esc(c.name) + '」：' + esc(c.desc) + '</p>' +
+    '<div class="factbox"><b>史实小知识：</b>' + esc(f.f) + '</div>' +
+  '</div>' +
+
+  '<div class="card">' +
+    '<div class="sec-title"><i class="bar"></i>你的五维性情</div>' +
+    '<div class="dims">' + radarHTML(res.vec) + '<div>' + dimList + '</div></div>' +
+    '<div class="kp2">' +
+      '<div><b>最突出：' + esc(res.topDim.name) + ' ' + res.topDim.score + ' 分</b><p>这是你最鲜明的性情底色，别人对你的第一印象多半来自这里。</p></div>' +
+      '<div><b>最含蓄：' + esc(res.lowDim.name) + ' ' + res.lowDim.score + ' 分</b><p>这不是缺点，只是你在这件事上比多数人更收着，也更容易被误读。</p></div>' +
+    '</div>' +
+  '</div>' +
+
+  '<div class="card">' +
+    '<div class="sec-title"><i class="bar"></i>你所属的族群：' + esc(c.name) + '</div>' +
+    '<div class="clanbox">' +
+      '<h4>' + esc(c.tag) + '</h4>' +
+      '<p>' + esc(c.desc) + '</p>' +
+      '<div class="kp2">' +
+        '<div><b>这一族的优势</b><p>' + esc(c.good) + '</p></div>' +
+        '<div><b>这一族的代价</b><p>' + esc(c.bad) + '</p></div>' +
+      '</div>' +
+    '</div>' +
+  '</div>' +
+
+  '<div class="card">' +
+    '<div class="sec-title"><i class="bar"></i>如果把 TA 的活法借给你：3 条建议</div>' +
+    '<ul class="list">' + advice + '</ul>' +
+    '<div class="hybrid" style="margin-top:14px"><b>提醒：</b>这是把人物的性情当作比喻给出的现代建议，<b>不代表你「就是」TA</b>，也不评价任何历史人物。</div>' +
+  '</div>' +
+
+  '<div class="card">' +
+    '<div class="sec-title"><i class="bar"></i>同族的其他人物</div>' +
+    '<p class="tiny" style="margin:-6px 0 14px">你与 TA 们同属「' + esc(c.name) + '」，区别主要在五个维度的偏重上。</p>' +
+    '<div class="sameclan">' + sameClan + '</div>' +
+  '</div>' +
+
+  '<div class="card">' +
+    '<div class="sec-title"><i class="bar"></i>为什么是「' + esc(f.n) + '」</div>' +
+    '<p class="tiny" style="margin:-6px 0 14px">先在 ' + CLANS.length + ' 个族群中定位到「' + esc(c.name) + '」，再在' + esc(res.poolLabel) +
+      '库里比对同族人物，差距最小的一位就是你。下面是最近的三位。</p>' +
+    '<div class="rank">' + rankRows + '</div>' +
+  '</div>' +
+
+  '<div class="card">' +
+    '<div class="sec-title"><i class="bar"></i>结果说明</div>' + quality +
+    '<div class="disc" style="margin-top:' + (res.qualityNotes.length ? '14px' : '0') + '">本结果由你的 20 题作答按公开规则计算得出，不含随机成分；它描述的是一种<b>当前的性格倾向</b>，会随经历变化。古代人物在这里只是性情的比喻，<b>不代表你「就是」TA，也不代表对这些人物的评价</b>。本测评为原创娱乐性自我探索内容，<b>不是心理测验、不构成心理测评或专业诊断</b>。若你正被情绪问题长期困扰，请寻求专业帮助。</div>' +
+    '<div style="display:flex;justify-content:center;margin-top:16px"><button class="btn btn-ghost btn-sm" data-act="edit2">返回修改答案</button></div>' +
+  '</div>' +
+
+  '<div class="card answers"><details><summary>查看我的 20 题作答<span class="arw">▾</span></summary><div class="anslist">' + ansList + '</div></details></div>' +
+
+  '<div class="res-actions">' +
+    '<button class="btn btn-primary" data-act="poster">保存结果图</button>' +
+    '<button class="btn btn-ghost" data-act="copy">复制结果摘要</button>' +
+    '<button class="btn btn-ghost" data-act="retest">再测一次</button>' +
+  '</div>';
+}
+
+function summaryText(){
+  var r = state.result;
+  if (!r) return '';
+  var f = r.fig, c = r.clan;
+  var L = [];
+  L.push('【你在古代是谁 · 我的测评结果】');
+  L.push('人物库：' + r.poolLabel);
+  L.push('最像你的是：' + f.n + '（' + f.d + '）· ' + c.name + '　契合度 ' + r.figFit + '%');
+  L.push('TA 的性情：' + f.t);
+  L.push('');
+  L.push('五维性情：');
+  r.dims.forEach(function(d){ L.push('· ' + d.name + ' ' + d.score + ' / 100（' + d.pole + '）'); });
+  L.push('');
+  L.push('史实小知识：' + f.f);
+  L.push('可以借鉴的 3 条建议：');
+  f.a.forEach(function(x, i){ L.push('  ' + (i + 1) + '. ' + x); });
+  L.push('');
+  L.push('—— 原创性格自评，仅供自我探索，不构成心理诊断，也不评价历史人物。');
+  return L.join('\n');
+}
+
+/* =========================================================
+   8. 结果图导出
+   ========================================================= */
+function cssFont(w, s){ return w + ' ' + s + 'px "PingFang SC","HarmonyOS Sans SC","Hiragino Sans GB","Microsoft YaHei UI","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif'; }
+function roundRect(ctx, x, y, w, h, r){
+  var rr = Math.min(r, Math.abs(w) / 2, Math.abs(h) / 2);
+  ctx.beginPath(); ctx.moveTo(x + rr, y);
+  ctx.lineTo(x + w - rr, y); ctx.quadraticCurveTo(x + w, y, x + w, y + rr);
+  ctx.lineTo(x + w, y + h - rr); ctx.quadraticCurveTo(x + w, y + h, x + w - rr, y + h);
+  ctx.lineTo(x + rr, y + h); ctx.quadraticCurveTo(x, y + h, x, y + h - rr);
+  ctx.lineTo(x, y + rr); ctx.quadraticCurveTo(x, y, x + rr, y); ctx.closePath();
+}
+function wrapCanvasText(ctx, text, maxWidth){
+  var lines = [], line = '', noStart = '，。、；：！？）》」』”’%）,.;:!?';
+  for (var i = 0; i < text.length; i++){
+    var ch = text.charAt(i), test = line + ch;
+    if (line && ctx.measureText(test).width > maxWidth){
+      if (noStart.indexOf(ch) >= 0){ line = test; continue; }
+      lines.push(line); line = ch;
+    } else { line = test; }
+  }
+  if (line) lines.push(line);
+  return lines;
+}
+function softBlob(ctx, x, y, r, color){
+  var g = ctx.createRadialGradient(x, y, 0, x, y, r);
+  g.addColorStop(0, color); g.addColorStop(1, 'rgba(255,255,255,0)');
+  ctx.fillStyle = g; ctx.beginPath(); ctx.arc(x, y, r, 0, Math.PI * 2); ctx.fill();
+}
+function posterSVG(clanId, g){
+  /* 结果图只需静态头像：把动画类去掉 */
+  return figureSVG(clanId, '', g).replace(/ class="fig-[a-z0-9]+"/g, '').replace(/ style="animation-delay:[^"]*"/g, '').replace('<svg ', '<svg width="240" height="264" ');
+}
+function buildPoster(res, onDone, onFail){
+  try{
+    var f = res.fig, c = res.clan;
+    var W = 750, S = 2, P = 46, CW = W - P * 2;
+    var measure = document.createElement('canvas').getContext('2d');
+    var cv = document.createElement('canvas'); var ctx = cv.getContext('2d');
+    measure.font = cssFont('500', 25);
+    var tagLines = wrapCanvasText(measure, f.t, CW - 110).slice(0, 2);
+    var chips = f.k.slice(0, 3);
+    measure.font = cssFont('700', 22);
+    var chipW = chips.map(function(k){ return measure.measureText(k).width + 42; });
+    var rowW = chipW.reduce(function(a, b){ return a + b + 12; }, -12);
+
+    var yBrand = 44 + 30;
+    var aCY = yBrand + 34 + 30 + 118, aR = 116;
+    var yName = aCY + aR + 58;
+    var yDyn = yName + 34;
+    var yTag = yDyn + 40;
+    var tagEnd = yTag + (tagLines.length - 1) * 36;
+    var yClan = tagEnd + 42;
+    var yDiv = yClan + 30;
+    var yDims = yDiv + 26;
+    var yChips = yDims + 5 * 62 + 14;
+    var yFoot = yChips + 54 + 22;
+    var footH = (SITE.url ? 176 : 114) + 30;
+    var cardBottom = yFoot + footH;
+    var H = cardBottom + 44;
+    cv.width = W * S; cv.height = Math.ceil(H) * S; ctx.scale(S, S);
+
+    var bg = ctx.createLinearGradient(0, 0, W, H);
+    bg.addColorStop(0, '#FFF1F5'); bg.addColorStop(0.52, '#FFE6EE'); bg.addColorStop(1, '#FFF4EA');
+    ctx.fillStyle = bg; ctx.fillRect(0, 0, W, H);
+    softBlob(ctx, 96, 70, 210, 'rgba(255,188,207,.62)');
+    softBlob(ctx, W - 60, H - 110, 240, 'rgba(255,220,205,.5)');
+
+    ctx.save(); ctx.shadowColor = 'rgba(190,80,110,.16)'; ctx.shadowBlur = 34; ctx.shadowOffsetY = 12;
+    ctx.fillStyle = '#FFFFFF'; roundRect(ctx, P, 44, CW, cardBottom - 44, 34); ctx.fill(); ctx.restore();
+
+    var hg = ctx.createLinearGradient(P + 22, yBrand, P + 54, yBrand + 32);
+    hg.addColorStop(0, '#E8506F'); hg.addColorStop(1, '#FF8FAE');
+    ctx.fillStyle = hg; roundRect(ctx, P + 22, yBrand, 32, 32, 10); ctx.fill();
+    ctx.fillStyle = '#FFFFFF';
+    ctx.beginPath(); ctx.moveTo(P + 38, yBrand + 24); ctx.bezierCurveTo(P + 26, yBrand + 14, P + 30, yBrand + 6, P + 38, yBrand + 12);
+    ctx.bezierCurveTo(P + 46, yBrand + 6, P + 50, yBrand + 14, P + 38, yBrand + 24); ctx.closePath(); ctx.fill();
+    ctx.textBaseline = 'middle'; ctx.textAlign = 'left';
+    ctx.fillStyle = '#3A2A31'; ctx.font = cssFont('800', 25);
+    ctx.fillText('你在古代是谁', P + 66, yBrand + 17);
+    ctx.textAlign = 'right'; ctx.fillStyle = '#A08E95'; ctx.font = cssFont('600', 20);
+    ctx.fillText('原创自评', W - P - 22, yBrand + 17);
+
+    ctx.fillStyle = (function(){
+      var hex = (FIG[c.id] && FIG[c.id].c2) ? FIG[c.id].c2 : '#FFBCCF';
+      var v = parseInt(String(hex).replace('#', ''), 16);
+      return 'rgba(' + ((v >> 16) & 255) + ',' + ((v >> 8) & 255) + ',' + (v & 255) + ',0.3)';
+    })();
+    ctx.beginPath(); ctx.arc(W / 2, aCY, aR, 0, Math.PI * 2); ctx.fill();
+
+    ctx.textAlign = 'center'; ctx.textBaseline = 'alphabetic';
+    var nf = f.n.length >= 4 ? 50 : 60;
+    ctx.font = cssFont('800', nf);
+    var ng = ctx.createLinearGradient(W / 2 - 170, yName - nf, W / 2 + 170, yName);
+    ng.addColorStop(0, '#E8506F'); ng.addColorStop(1, '#FF8FAE');
+    ctx.fillStyle = ng; ctx.fillText(f.n, W / 2, yName);
+    ctx.fillStyle = '#B92A50'; ctx.font = cssFont('800', 24);
+    ctx.fillText(f.d + ' · ' + c.name, W / 2, yDyn);
+    ctx.fillStyle = '#6E5A61'; ctx.font = cssFont('500', 25);
+    tagLines.forEach(function(l, k){ ctx.fillText(l, W / 2, yTag + k * 36); });
+    ctx.fillStyle = '#A9762F'; ctx.font = cssFont('700', 23);
+    ctx.fillText('与 TA 的性情契合度 ' + res.figFit + '%　·　' + res.poolLabel, W / 2, yClan);
+
+    ctx.strokeStyle = '#F8DCE6'; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(P + 30, yDiv); ctx.lineTo(W - P - 30, yDiv); ctx.stroke();
+
+    res.dims.forEach(function(d, k){
+      var ry = yDims + k * 62;
+      ctx.textAlign = 'left'; ctx.font = cssFont('700', 25); ctx.fillStyle = '#3A2A31';
+      ctx.fillText(d.name, P + 30, ry + 24);
+      var nameW = ctx.measureText(d.name).width;
+      var pole = d.pole, pbg, pfg;
+      if (d.level === 'high'){ pbg = '#FFDCE7'; pfg = '#B92A50'; }
+      else if (d.level === 'low'){ pbg = '#E2F6F1'; pfg = '#2F7F6C'; }
+      else { pbg = '#FFE9EF'; pfg = '#8A5A66'; }
+      ctx.font = cssFont('700', 19);
+      var pw = ctx.measureText(pole).width + 26;
+      ctx.fillStyle = pbg; roundRect(ctx, P + 30 + nameW + 12, ry + 4, pw, 26, 13); ctx.fill();
+      ctx.fillStyle = pfg; ctx.textAlign = 'center';
+      ctx.fillText(pole, P + 30 + nameW + 12 + pw / 2, ry + 23);
+      ctx.textAlign = 'right'; ctx.font = cssFont('800', 25); ctx.fillStyle = '#6E5A61';
+      ctx.fillText(String(Math.round(d.score)), W - P - 30, ry + 24);
+      var bx = P + 30, bw = CW - 60, by = ry + 36, bh = 14;
+      ctx.fillStyle = '#FBE4EB'; roundRect(ctx, bx, by, bw, bh, 7); ctx.fill();
+      if (d.score > 0.5){
+        var fg2 = ctx.createLinearGradient(bx, 0, bx + bw, 0);
+        fg2.addColorStop(0, '#FF7A9C'); fg2.addColorStop(1, '#D93A63');
+        ctx.fillStyle = fg2; roundRect(ctx, bx, by, Math.max(bh, bw * d.score / 100), bh, 7); ctx.fill();
+      }
+    });
+
+    var cx0 = (W - rowW) / 2;
+    chips.forEach(function(k, i){
+      var w = chipW[i];
+      ctx.fillStyle = 'rgba(232,80,111,.13)';
+      roundRect(ctx, cx0, yChips, w, 42, 21); ctx.fill();
+      ctx.fillStyle = '#6E5A61'; ctx.font = cssFont('700', 22);
+      ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+      ctx.fillText(k, cx0 + w / 2, yChips + 22);
+      cx0 += w + 12;
+    });
+    ctx.textBaseline = 'alphabetic';
+
+    ctx.strokeStyle = '#F8DCE6'; ctx.beginPath(); ctx.moveTo(P + 30, yFoot); ctx.lineTo(W - P - 30, yFoot); ctx.stroke();
+    ctx.textAlign = 'center'; ctx.font = cssFont('700', 23); ctx.fillStyle = '#3A2A31';
+    ctx.fillText('最突出：' + res.topDim.name + ' ' + res.topDim.score + '　·　最含蓄：' + res.lowDim.name + ' ' + res.lowDim.score, W / 2, yFoot + 40);
+    var fy = yFoot + 60;
+    if (SITE.url){
+      ctx.font = cssFont('700', 22);
+      var uw = Math.min(CW - 100, ctx.measureText(SITE.url).width + 60);
+      ctx.fillStyle = '#FFF1F5'; roundRect(ctx, (W - uw) / 2, fy, uw, 50, 16); ctx.fill();
+      ctx.fillStyle = '#B92A50'; ctx.textBaseline = 'middle';
+      ctx.fillText(SITE.url, W / 2, fy + 26); ctx.textBaseline = 'alphabetic'; fy += 62;
+    }
+    ctx.font = cssFont('600', 21); ctx.fillStyle = '#A08E95';
+    ctx.fillText(SITE.tip, W / 2, fy + 24);
+    ctx.font = cssFont('500', 19); ctx.fillStyle = '#C6B6BC';
+    ctx.fillText('原创性格自评 · 仅供自我探索，不构成心理诊断', W / 2, fy + 54);
+
+    var finished = false;
+    function finish(){ if (finished) return; finished = true; try{ onDone(cv.toDataURL('image/png')); }catch(e){ onFail(e); } }
+    var img = new Image();
+    img.onload = function(){
+      try{
+        ctx.save(); ctx.beginPath(); ctx.arc(W / 2, aCY, aR, 0, Math.PI * 2); ctx.clip();
+        ctx.drawImage(img, W / 2 - aR, aCY - aR, aR * 2, aR * 2); ctx.restore();
+        ctx.strokeStyle = 'rgba(255,255,255,.75)'; ctx.lineWidth = 5;
+        ctx.beginPath(); ctx.arc(W / 2, aCY, aR - 2, 0, Math.PI * 2); ctx.stroke();
+      }catch(e){}
+      finish();
+    };
+    img.onerror = function(){ finish(); };
+    img.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(posterSVG(f.c, f.g));
+    setTimeout(finish, 1500);
+  }catch(err){ onFail(err); }
+}
+function openPoster(){
+  var box = document.getElementById('poster'), img = document.getElementById('poster-img');
+  var tip = document.getElementById('poster-tip'), dl = document.getElementById('poster-dl');
+  var res = state.result; if (!res) return;
+  box.hidden = false; document.body.classList.add('poster-open');
+  img.removeAttribute('src'); img.style.visibility = 'hidden'; dl.hidden = true;
+  tip.textContent = '正在生成结果图…';
+  setTimeout(function(){
+    buildPoster(res, function(url){
+      img.src = url; img.style.visibility = 'visible';
+      dl.href = url; dl.setAttribute('download', '古代人物-' + res.fig.n + '.png'); dl.hidden = false;
+      tip.innerHTML = '手机：长按上方图片 → 存储到照片<br>电脑：点下面的按钮下载图片';
+    }, function(){ tip.textContent = '这个浏览器没能生成图片，可以改用「复制结果摘要」把结果发出去。'; });
+  }, 40);
+}
+function closePoster(){ document.getElementById('poster').hidden = true; document.body.classList.remove('poster-open'); }
+
+/* =========================================================
+   9. 状态与交互
+   ========================================================= */
+var STORE_KEY = 'ancient-who-v1';
+var state = { answers:{}, idx:0, result:null, pool:'all', listPool:'all', resetArmed:false, resetTimer:null, advanceTimer:null };
+
+function $(s){ return document.querySelector(s); }
+function $$(s){ return Array.prototype.slice.call(document.querySelectorAll(s)); }
+function save(){ try{ localStorage.setItem(STORE_KEY, JSON.stringify({ answers:state.answers, idx:state.idx, pool:state.pool })); }catch(e){} }
+function load(){
+  try{
+    var raw = localStorage.getItem(STORE_KEY); if (!raw) return;
+    var d = JSON.parse(raw);
+    if (d && d.answers && typeof d.answers === 'object'){
+      var clean = {};
+      QUESTIONS.forEach(function(q){ var v = d.answers[q.id]; if (typeof v === 'number' && v >= 1 && v <= 5) clean[q.id] = v; });
+      state.answers = clean;
+      state.idx = Math.min(Math.max(parseInt(d.idx, 10) || 0, 0), QUESTIONS.length - 1);
+      if (d.pool === 'm' || d.pool === 'f' || d.pool === 'all'){ state.pool = d.pool; state.listPool = d.pool; }
+    }
+  }catch(e){}
+}
+function clearStore(){ try{ localStorage.removeItem(STORE_KEY); }catch(e){} }
+
+var toastTimer = null;
+function toast(msg){
+  var t = $('#toast'); t.textContent = msg; t.classList.add('on');
+  clearTimeout(toastTimer); toastTimer = setTimeout(function(){ t.classList.remove('on'); }, 2800);
+}
+function answeredCount(){ var n = 0; QUESTIONS.forEach(function(q){ if (typeof state.answers[q.id] === 'number') n++; }); return n; }
+function firstUnanswered(from){
+  var n = QUESTIONS.length;
+  for (var k = 0; k < n; k++){
+    var i = from === undefined ? k : (from + k) % n;
+    if (typeof state.answers[QUESTIONS[i].id] !== 'number') return i;
+  }
+  return -1;
+}
+function showScreen(name){
+  clearTimeout(toastTimer); $('#toast').classList.remove('on');
+  $('#s-home').classList.toggle('on', name === 'home');
+  $('#s-quiz').classList.toggle('on', name === 'quiz');
+  $('#s-result').classList.toggle('on', name === 'result');
+  $('#top-home').hidden = (name === 'home');
+  window.scrollTo(0, 0);
+}
+function syncPoolButtons(){
+  $$('.gbtn').forEach(function(b){ b.setAttribute('aria-pressed', b.getAttribute('data-pool') === state.pool ? 'true' : 'false'); });
+  $$('.poolhead .seg button').forEach(function(b){ b.setAttribute('aria-pressed', b.getAttribute('data-pool') === state.listPool ? 'true' : 'false'); });
+  var n = state.listPool === 'all' ? FIGURES.length : FIGURES.filter(function(f){ return f.g === state.listPool; }).length;
+  $('#pool-count').textContent = '共 ' + n + ' 位';
+  var pl = poolName(state.pool);
+  $('#q-pool').textContent = pl;
+}
+function renderFigList(){
+  var list = FIGURES.filter(function(f){ return state.listPool === 'all' || f.g === state.listPool; });
+  $('#figlist').innerHTML = list.map(function(f){
+    return '<div class="fcard"><b>' + esc(f.n) + '</b><i>' + esc(f.d) + ' · ' + (f.g === 'f' ? '女' : '男') + '</i>' +
+      '<p>' + esc(f.t) + '</p><em>' + esc(CLAN_BY_ID[f.c].name) + '</em></div>';
+  }).join('');
+}
+function mountHome(){
+  var picks = ['emperor', 'literati', 'virtue'];
+  $('#hero-figs').innerHTML = picks.map(function(id){
+    return '<div class="hf">' + figureSVG(id, '', id === 'literati' ? 'f' : 'm') + '<span>' + CNAME[id] + '</span></div>';
+  }).join('');
+  $('#clans').innerHTML = CLANS.map(function(c, ci){
+    var n = FIG_BY_CLAN[c.id].length;
+    return '<div class="clan" title="' + esc(c.tag) + '">' + figureSVG(c.id, '', (ci % 2 ? 'f' : 'm')) + '<b>' + esc(c.name) + '</b><span>' + esc(c.tag) + '</span><i>' + n + ' 位人物</i></div>';
+  }).join('');
+  renderFigList();
+  syncPoolButtons();
+  var n = answeredCount();
+  $('#resume-box').hidden = !(n > 0 && n < QUESTIONS.length);
+  $('#resume-n').textContent = n;
+  $('#resume-t').textContent = QUESTIONS.length;
+}
+
+/* ---- 答题 ---- */
+function cancelAdvance(){ if (state.advanceTimer){ clearTimeout(state.advanceTimer); state.advanceTimer = null; } }
+function renderQuiz(animate){
+  cancelAdvance();
+  var q = QUESTIONS[state.idx], d = dimOf(q.dim);
+  $('#q-idx').textContent = state.idx + 1;
+  $('#q-total').textContent = QUESTIONS.length;
+  $('#q-dim').textContent = d.name;
+  $('#q-pool').textContent = poolName(state.pool);
+  var done = answeredCount();
+  $('#q-bar').style.width = (done / QUESTIONS.length * 100) + '%';
+  $('#q-progress').setAttribute('aria-valuenow', String(done));
+  $('#q-note').textContent = '已完成 ' + done + ' / ' + QUESTIONS.length;
+  var card = $('#qcard');
+  card.innerHTML = questionCardHTML(state.idx, state.answers, state.pool);
+  if (animate){ card.classList.remove('in'); void card.offsetWidth; card.classList.add('in'); }
+  $('#btn-prev').disabled = state.idx === 0;
+  var last = state.idx === QUESTIONS.length - 1, next = $('#btn-next');
+  if (last){ var miss = QUESTIONS.length - done; next.textContent = miss > 0 ? ('查看结果（还有 ' + miss + ' 题未答）') : '查看结果'; }
+  else { next.textContent = '下一题'; }
+  renderSheet(); save();
+}
+function renderSheet(){
+  var grid = $('#sheet-grid'); if (!grid) return;
+  grid.innerHTML = QUESTIONS.map(function(q, i){
+    var c = [];
+    if (typeof state.answers[q.id] === 'number') c.push('done');
+    if (i === state.idx) c.push('now');
+    return '<button type="button" class="' + c.join(' ') + '" data-goto="' + i + '" aria-label="第 ' + (i + 1) + ' 题' +
+      (typeof state.answers[q.id] === 'number' ? '，已作答' : '，未作答') + '">' + (i + 1) + '</button>';
+  }).join('');
+}
+function goto(idx, animate){ state.idx = Math.min(Math.max(idx, 0), QUESTIONS.length - 1); renderQuiz(animate !== false); }
+function answer(v){
+  var q = QUESTIONS[state.idx], from = state.idx;
+  state.answers[q.id] = v; renderQuiz(false); cancelAdvance();
+  if (from < QUESTIONS.length - 1){
+    state.advanceTimer = setTimeout(function(){
+      state.advanceTimer = null;
+      if (state.answers[q.id] === v && state.idx === from && $('#s-quiz').classList.contains('on')) goto(from + 1, true);
+    }, 230);
+  } else { toast('20 题已答完，点「查看结果」看看你在古代是谁'); }
+}
+function submit(){
+  cancelAdvance();
+  var miss = firstUnanswered(0);
+  if (miss >= 0){
+    var left = QUESTIONS.length - answeredCount();
+    toast('还有 ' + left + ' 题没有作答，已跳到第 ' + (miss + 1) + ' 题');
+    if ($('#sheet').hidden) toggleSheet(true);
+    goto(miss, true);
+    var b = document.querySelector('[data-goto="' + miss + '"]');
+    if (b){ b.classList.add('miss'); setTimeout(function(){ b.classList.remove('miss'); }, 2600); }
+    return;
+  }
+  state.result = computeResult(state.answers, state.pool);
+  state.result.answers = state.answers;
+  $('#result-body').innerHTML = resultBodyHTML(state.result);
+  showScreen('result'); state.resetArmed = false;
+}
+function toggleSheet(force){
+  var s = $('#sheet'), open = force === undefined ? s.hidden : force;
+  s.hidden = !open;
+  $('#btn-sheet').setAttribute('aria-expanded', open ? 'true' : 'false');
+  $('#btn-sheet').textContent = open ? '收起答题卡' : '答题卡';
+}
+function onResultClick(e){
+  var btn = e.target.closest ? e.target.closest('[data-act]') : null; if (!btn) return;
+  var act = btn.getAttribute('data-act');
+  if (act === 'edit' || act === 'edit2'){ showScreen('quiz'); renderQuiz(true); toggleSheet(false); toast('已回到答题页，修改后请重新点「查看结果」'); return; }
+  if (act === 'pool'){ showScreen('home'); toast('回到首页，重新选择人物库后再看结果'); return; }
+  if (act === 'retest'){
+    if (!state.resetArmed){
+      state.resetArmed = true;
+      var old = btn.textContent; btn.textContent = '再点一次确认清空';
+      toast('重新测试会清空全部作答，再点一次即可确认');
+      clearTimeout(state.resetTimer);
+      state.resetTimer = setTimeout(function(){ state.resetArmed = false; btn.textContent = old; }, 4200);
+      return;
+    }
+    clearTimeout(state.resetTimer); state.resetArmed = false;
+    state.answers = {}; state.idx = 0; state.result = null;
+    clearStore(); mountHome(); showScreen('quiz'); renderQuiz(true); toast('已清空作答，开始新一轮');
+    return;
+  }
+  if (act === 'poster'){ openPoster(); return; }
+  if (act === 'copy'){ copySummary(); return; }
+}
+function copySummary(){
+  var text = summaryText(); if (!text) return;
+  function fallback(){
+    try{
+      var ta = document.createElement('textarea');
+      ta.value = text; ta.setAttribute('readonly','readonly'); ta.style.position = 'fixed'; ta.style.left = '-9999px';
+      document.body.appendChild(ta); ta.select();
+      var ok = document.execCommand && document.execCommand('copy');
+      document.body.removeChild(ta);
+      if (ok){ toast('结果摘要已复制到剪贴板'); return; }
+    }catch(e){}
+    var box = $('#result-body');
+    var ex = document.getElementById('copy-fallback'); if (ex) ex.parentNode.removeChild(ex);
+    var wrap = document.createElement('div'); wrap.id = 'copy-fallback'; wrap.className = 'card';
+    wrap.innerHTML = '<div class="sec-title" style="font-size:15px"><i class="bar"></i>手动复制结果摘要</div>' +
+      '<p class="tiny" style="margin:-6px 0 10px">浏览器不允许自动复制（常见于直接双击打开的本地文件）。下面文字已选中，按 Ctrl/⌘ + C 即可复制。</p>' +
+      '<textarea readonly style="width:100%;min-height:200px;border:1px solid #F6DDE3;border-radius:14px;padding:12px;font:13px/1.7 inherit;color:#3A2A31;resize:vertical"></textarea>';
+    box.appendChild(wrap);
+    var ta2 = wrap.querySelector('textarea'); ta2.value = text;
+    wrap.scrollIntoView({ behavior:'smooth', block:'center' }); ta2.focus(); ta2.select();
+    toast('请按 Ctrl/⌘ + C 复制');
+  }
+  if (navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(text).then(function(){ toast('结果摘要已复制到剪贴板'); }, fallback); }
+  else { fallback(); }
+}
+function onKey(e){
+  if (!$('#s-quiz').classList.contains('on')) return;
+  var tag = (e.target && e.target.tagName) || '';
+  if (tag === 'INPUT' || tag === 'TEXTAREA') return;
+  if (e.key === 'ArrowLeft'){ goto(state.idx - 1, true); e.preventDefault(); return; }
+  if (e.key === 'ArrowRight'){ goto(state.idx + 1, true); e.preventDefault(); return; }
+  var n = parseInt(e.key, 10);
+  if (n >= 1 && n <= 5){ state.answers[QUESTIONS[state.idx].id] = OPTIONS[n - 1].v; renderQuiz(true); e.preventDefault(); }
+}
+
+/* =========================================================
+   10. 初始化
+   ========================================================= */
+function init(){ if (gateNeeded()){ showGate(startApp); return; } startApp(); }
+function startApp(){
+  load(); mountHome();
+  $('#q-total').textContent = QUESTIONS.length;
+  $('#type-count-1').textContent = FIGURES.length;
+  $('#type-count-2').textContent = FIGURES.length;
+  renderQuiz(false); toggleSheet(false);
+
+  $('#btn-start').addEventListener('click', function(){
+    var n = answeredCount();
+    if (n > 0 && n < QUESTIONS.length){ var i = firstUnanswered(0); goto(i >= 0 ? i : 0, true); }
+    else { state.idx = 0; renderQuiz(true); }
+    showScreen('quiz'); renderSheet();
+  });
+  $('#btn-resume').addEventListener('click', function(){ var i = firstUnanswered(0); goto(i >= 0 ? i : 0, true); showScreen('quiz'); });
+  $('#btn-clear').addEventListener('click', function(){
+    state.answers = {}; state.idx = 0; state.result = null; clearStore(); mountHome(); toast('已清空本地作答记录');
+  });
+  $$('.gbtn').forEach(function(b){
+    b.addEventListener('click', function(){
+      state.pool = b.getAttribute('data-pool'); syncPoolButtons(); save();
+      if (answeredCount() === QUESTIONS.length && state.result){ state.result = computeResult(state.answers, state.pool); state.result.answers = state.answers; $('#result-body').innerHTML = resultBodyHTML(state.result); showScreen('result'); }
+      toast('已切换到' + poolName(state.pool) + '库');
+    });
+  });
+  $$('.poolhead .seg button').forEach(function(b){
+    b.addEventListener('click', function(){ state.listPool = b.getAttribute('data-pool'); syncPoolButtons(); renderFigList(); });
+  });
+  $('#btn-sheet').addEventListener('click', function(){ toggleSheet(); });
+  $('#sheet-grid').addEventListener('click', function(e){
+    var b = e.target.closest('[data-goto]'); if (!b) return;
+    goto(parseInt(b.getAttribute('data-goto'), 10), true);
+  });
+  $('#qcard').addEventListener('click', function(e){
+    var b = e.target.closest('.opt'); if (!b) return;
+    answer(parseInt(b.getAttribute('data-v'), 10));
+  });
+  $('#btn-prev').addEventListener('click', function(){ if (state.idx === 0){ toast('已经是第一题了'); return; } goto(state.idx - 1, true); });
+  $('#btn-next').addEventListener('click', function(){
+    if (state.idx < QUESTIONS.length - 1){
+      if (typeof state.answers[QUESTIONS[state.idx].id] !== 'number'){ toast('这一题还没有选择，选一个最接近的就好'); return; }
+      goto(state.idx + 1, true);
+    } else { submit(); }
+  });
+  $('#top-home').addEventListener('click', function(){ mountHome(); showScreen('home'); });
+  $('#result-body').addEventListener('click', onResultClick);
+  $('#poster-close').addEventListener('click', closePoster);
+  $('#poster').addEventListener('click', function(e){ if (e.target === this) closePoster(); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closePoster(); });
+  document.addEventListener('keydown', onKey);
+}
+if (typeof document !== 'undefined'){
+  if (document.readyState === 'loading'){ document.addEventListener('DOMContentLoaded', init); } else { init(); }
+}
+
+var API = {
+  DIMS:DIMS, CLANS:CLANS, FIGURES:FIGURES, QUESTIONS:QUESTIONS, OPTIONS:OPTIONS, ART:FIG, SITE:SITE,
+  GATE:(typeof GATE === 'undefined' ? null : GATE), sha256Hex:sha256Hex, hashPassword:hashPassword,
+  itemScore:itemScore, dimScores:dimScores, dist:dist, computeResult:computeResult, poolName:poolName,
+  questionCardHTML:questionCardHTML, resultBodyHTML:resultBodyHTML, radarHTML:radarHTML,
+  figureSVG:figureSVG, posterSVG:posterSVG, summaryText:summaryText,
+  wrapCanvasText:wrapCanvasText, roundRect:roundRect, cssFont:cssFont, state:state
+};
+if (typeof module !== 'undefined' && module.exports){ module.exports = API; }
+if (typeof window !== 'undefined'){ window.__QUIZ_API__ = API; }
+})();
+</script>
+</body>
+</html>
